@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>添加实验记录</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>添加新实验</h1>
+    <form method="post">
+        <label>实验名称：</label><input type="text" name="exp_name" required><br><br>
+        <label>实验日期：</label><input type="date" name="exp_date" required><br><br>
+        <label>攻击机IP：</label><input type="text" name="attacker_ip"><br><br>
+        <label>靶机IP：</label><input type="text" name="target_ip"><br><br>
+        <label>网关IP：</label><input type="text" name="gateway_ip"><br><br>
+        <label>是否成功：</label><input type="checkbox" name="success" value="true"><br><br>
+        <label>备注：</label><textarea name="notes" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">提交</button>
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">返回首页</a>
+</body>
+</html>

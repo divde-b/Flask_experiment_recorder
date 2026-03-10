@@ -1,0 +1,19 @@
+#Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.DS_Store
+venv/
+.env
+.venv/
+
+# 项目敏感信息
+knowledge_base.json  # 如果包含敏感数据可以不提交
+config.py             # 如果你把密码单独放进了配置文件
+
+# IDE
+.vscode/
+.idea/

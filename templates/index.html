@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实验记录系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>我的网络试验记录</h1>
+    <a href="{{ url_for('add') }}">添加新实验</a>
+    <table>
+        <thead>
+        <tr>
+                <th>ID</th>
+                <th>实验名称</th>
+                <th>日期</th>
+                <th>攻击机IP</th>
+                <th>靶机IP</th>
+                <th>网关IP</th>
+                <th>成功</th>
+                <th>备注</th>
+                <th>创建时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exp in experiments %}
+            <tr>
+                <td>{{ exp.id }}</td>
+                <td>{{ exp.exp_name }}</td>
+                <td>{{ exp.exp_date }}</td>
+                <td>{{ exp.attacker_ip or '' }}</td>
+                <td>{{ exp.target_ip or '' }}</td>
+                <td>{{ exp.gateway_ip or '' }}</td>
+                <td>{{ '✅' if exp.success else '❌' }}</td>
+                <td>{{ exp.notes or '' }}</td>
+                <td>{{ exp.created_at }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="9" style="text-align:center; padding:20px;">暂无实验记录，点击上方按钮添加</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
