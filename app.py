@@ -6,6 +6,12 @@ from pymysql.cursors import DictCursor
 import logging
 from logging.handlers import RotatingFileHandler
 import os
+"""
+使用Flask Web框架核心
+pymysql mysql数据库连接库
+logging 日志记录模块，用于记录运行信息
+os 操作系统接口，用于文件路径操作
+"""
 
 #确保日志目录存在
 log_dir = 'logs'
@@ -39,19 +45,35 @@ logging.basicConfig(
 #获取当前模块的logger
 logger = logging.getLogger(__name__)
 
+"""
+创建logs目录（如果不存在）
+配置日志格式
+设置文件处理器，每个日志文件最大1MB，保留5个备份
+设置控制台处理器
+配置根日志记录器
+"""
 
 app = Flask(__name__)
 
+"""
+创建Flask应用实例
+"""
+
 #数据库连接配置
 db_config = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': 'zls29252431233',
-    'database': 'experiment_db',
-    'cursorclass': pymysql.cursors.DictCursor
+    'host': 'localhost',    #数据库主机
+    'user': 'root',    #用户名
+    'password': 'zls29252431233',   #密码
+    'database': 'experiment_db',    #数据库名
+    'cursorclass': pymysql.cursors.DictCursor   #返回字典格式结果
 }
 
 def get_db_connection():
+    """
+    创建数据库连接
+    如果连接失败，记录错误并
+    :return: None
+    """
     try:
         conn = pymysql.connect(**db_config)
         return conn
@@ -60,6 +82,7 @@ def get_db_connection():
         return None
 
 @app.route('/')
+#首页路由
 def index():
     logger.info("访问首页")
     conn = get_db_connection()
@@ -77,7 +100,16 @@ def index():
     conn.close()
     return render_template('index.html', experiments=experiments)
 
+"""
+记录访问日志
+连接数据库
+查询所有实验记录，按日期降序排序
+渲染index.html模板，传递试验记录数据
+如果查询失败，返回错误信息
+"""
+
 @app.route('/add', methods=['GET', 'POST'])
+#实验记录路由
 def add():
     if request.method == 'POST':
         exp_name = request.form['exp_name']
@@ -110,5 +142,15 @@ def add():
             return redirect(url_for('index'))
     return render_template('add.html')
 
+"""
+POST 请求处理（提交表单）
+从表单获取数据
+连接数据库
+执行INSERT语句（插入）
+提交事务
+重定向到首页
+GET请求 显示添加到表单页面
+"""
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) #启用调试模式
