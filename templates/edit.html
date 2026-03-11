@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>编辑实验</h1>
+    <h1>✏️ 编辑实验</h1>
     <form method="post">
         <label>实验名称：</label><input type="text" name="exp_name" value="{{ exp.exp_name }}" required><br>
         <label>实验日期：</label><input type="date" name="exp_date" value="{{ exp.exp_date }}" required><br>
@@ -17,7 +17,6 @@
         <label>备注：</label><textarea name="notes" rows="4">{{ exp.notes or '' }}</textarea><br>
         <button type="submit">更新</button>
     </form>
-    <br>
-    <a class="back-link" href="{{ url_for('index') }}">返回首页</a>
+    <a class="back-link" href="{{ url_for('index') }}">← 返回首页</a>
 </body>
 </html>
