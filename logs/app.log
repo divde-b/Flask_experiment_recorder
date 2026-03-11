@@ -9,3 +9,61 @@
 2026-03-10 20:34:06,699 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2026 20:34:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 2026-03-10 20:34:13,065 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2026 20:34:13] "GET /add HTTP/1.1" 200 -
 2026-03-10 20:34:13,074 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2026 20:34:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 12:11:51,476 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-11 12:11:51,477 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-11 12:11:51,477 - werkzeug - INFO -  * Restarting with stat
+2026-03-11 12:11:51,704 - werkzeug - WARNING -  * Debugger is active!
+2026-03-11 12:11:51,710 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-11 12:11:51,712 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-11 12:11:51,712 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-11 12:11:51,713 - werkzeug - INFO -  * Restarting with stat
+2026-03-11 12:11:51,933 - werkzeug - WARNING -  * Debugger is active!
+2026-03-11 12:11:51,938 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-11 12:11:55,214 - __main__ - INFO - 访问首页
+2026-03-11 12:11:55,234 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 12:11:55] "GET / HTTP/1.1" 200 -
+2026-03-11 12:11:55,386 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 12:11:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 12:11:55,425 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 12:11:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-11 12:12:09,520 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 12:12:09] "GET /add HTTP/1.1" 200 -
+2026-03-11 12:12:09,528 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 12:12:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 17:11:42,666 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-11 17:11:42,666 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-11 17:11:42,668 - werkzeug - INFO -  * Restarting with stat
+2026-03-11 17:11:43,315 - werkzeug - WARNING -  * Debugger is active!
+2026-03-11 17:11:43,322 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-11 17:11:45,836 - __main__ - INFO - 访问首页
+2026-03-11 17:11:45,859 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:11:45] "GET / HTTP/1.1" 200 -
+2026-03-11 17:11:46,012 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:11:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 17:11:54,324 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:11:54] "GET /add HTTP/1.1" 200 -
+2026-03-11 17:11:54,331 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:11:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 17:12:31,641 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:12:31] "GET /add HTTP/1.1" 200 -
+2026-03-11 17:12:31,651 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:12:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 17:13:35,112 - __main__ - INFO - 新增试验记录: ARP单向欺骗 - 2026-03-11
+2026-03-11 17:13:35,112 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:13:35] "[32mPOST /add HTTP/1.1[0m" 302 -
+2026-03-11 17:13:35,117 - __main__ - INFO - 访问首页
+2026-03-11 17:13:35,137 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:13:35] "GET / HTTP/1.1" 200 -
+2026-03-11 17:13:35,149 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 17:13:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 20:38:29,306 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-11 20:38:29,306 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-11 20:38:29,308 - werkzeug - INFO -  * Restarting with stat
+2026-03-11 20:38:29,601 - werkzeug - WARNING -  * Debugger is active!
+2026-03-11 20:38:29,606 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-11 20:38:31,237 - __main__ - INFO - 访问首页
+2026-03-11 20:38:31,249 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 20:38:31] "GET / HTTP/1.1" 200 -
+2026-03-11 20:38:31,342 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 20:38:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 20:38:42,072 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 20:38:42] "GET /add HTTP/1.1" 200 -
+2026-03-11 20:38:42,080 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 20:38:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 20:52:24,620 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-11 20:52:24,620 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-11 20:52:24,622 - werkzeug - INFO -  * Restarting with stat
+2026-03-11 20:52:24,903 - werkzeug - WARNING -  * Debugger is active!
+2026-03-11 20:52:24,908 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-11 20:52:27,698 - __main__ - INFO - 访问首页
+2026-03-11 20:52:27,711 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 20:52:27] "GET / HTTP/1.1" 200 -
+2026-03-11 20:52:27,796 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 20:52:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 20:52:39,673 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 20:52:39] "GET /add HTTP/1.1" 200 -
+2026-03-11 20:52:39,681 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 20:52:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

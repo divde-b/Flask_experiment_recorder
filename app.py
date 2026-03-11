@@ -152,5 +152,69 @@ POST 请求处理（提交表单）
 GET请求 显示添加到表单页面
 """
 
+@app.route('/delete/<int:exp_id>', methods=['POST'])
+#删除路由
+def delete(exp_id):
+    """根据试验ID删除记录"""
+    conn = get_db_connection()
+    if not conn:
+        return "数据库连接失败"
+    with conn.cursor() as cursor:
+        try:
+            cursor.execute("DELETE FROM experiments WHERE exp_id = %s", (exp_id,))
+            conn.commit()
+        except Error as e:
+            conn.rollback()
+            return f"删除失败: {e}"
+        finally:
+            conn.close()
+    return redirect(url_for('index'))
+
+
+@app.route('/edit/<int:exp_id>', methods=['GET', 'POST'])
+#编辑路由
+def edit(exp_id):
+    """编辑试验记录"""
+    conn = get_db_connection()
+    if not conn:
+        return "数据库连接失败"
+
+    if request.method == 'POST':
+        #获取表单数据
+        exp_name = request.form['exp_name']
+        exp_date = request.form['exp_date']
+        attacker_ip = request.form['attacker_ip']
+        target_ip = request.form['target_ip']
+        gateway_ip = request.form['gateway_ip']
+        success = True if request.form.get('success') else False
+        notes = request.form['notes']
+
+        with conn.cursor() as cursor:
+            sql = """
+                UPDATE experiments
+                SET exp_name = %s, exp_date = %s attacker_ip = %s, target_ip = %s, gateway_ip = %s success = %s, notes = %s
+                WHERE id=%s
+            """
+            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, exp_id)
+            try:
+                cursor.execute(sql, values)
+                conn.commit()
+            except Error as e:
+                conn.rollback()
+                return f"更新失败: {e}"
+            finally:
+                conn.close()
+        return redirect(url_for('index'))
+
+    else:
+        with conn.cursor() as cursor:
+            cursor.execute("SELECT * FROM experiments WHERE exp_id = %s", (exp_id,))
+            exp = cursor.fetchone()
+        conn.close()
+        if not exp:
+            return "记录不存在", 404
+        return render_template('edit.html', exp=exp)
+
+
 if __name__ == '__main__':
     app.run(debug=True) #启用调试模式

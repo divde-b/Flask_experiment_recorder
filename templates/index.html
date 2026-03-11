@@ -20,6 +20,7 @@
                 <th>成功</th>
                 <th>备注</th>
                 <th>创建时间</th>
+                <th>操作</th>
             </tr>
         </thead>
         <tbody>
@@ -34,10 +35,16 @@
                 <td>{{ '✅' if exp.success else '❌' }}</td>
                 <td>{{ exp.notes or '' }}</td>
                 <td>{{ exp.created_at }}</td>
+                <td>
+                     <a href="{{ url_for('edit', exp_id=exp.id) }}" style="margin-right:10px;">编辑</a>
+                    <form action="{{ url_for('delete', exp_id = exp.id) }}" method="post" style="display: inline">
+                        <button type="submit" onclick="return confirm('确定删除该记录吗？');" style="background:none; border:none; color:#dc3545; cursor:pointer; text-decoration:underline;">删除</button>
+                    </form>
+                </td>
             </tr>
             {% else %}
             <tr>
-                <td colspan="9" style="text-align:center; padding:20px;">暂无实验记录，点击上方按钮添加</td>
+                <td colspan="10" style="text-align:center;">暂无实验记录</td>
             </tr>
             {% endfor %}
         </tbody>

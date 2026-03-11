@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑实验记录</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>编辑实验</h1>
+    <form method="post">
+        <label>实验名称：</label><input type="text" name="exp_name" value="{{ exp.exp_name }}" required><br>
+        <label>实验日期：</label><input type="date" name="exp_date" value="{{ exp.exp_date }}" required><br>
+        <label>攻击机IP：</label><input type="text" name="attacker_ip" value="{{ exp.attacker_ip or '' }}"><br>
+        <label>靶机IP：</label><input type="text" name="target_ip" value="{{ exp.target_ip or '' }}"><br>
+        <label>网关IP：</label><input type="text" name="gateway_ip" value="{{ exp.gateway_ip or '' }}"><br>
+        <label>是否成功：</label><input type="checkbox" name="success" value="true" {% if exp.success %}checked{% endif %}><br>
+        <label>备注：</label><textarea name="notes" rows="4">{{ exp.notes or '' }}</textarea><br>
+        <button type="submit">更新</button>
+    </form>
+    <br>
+    <a class="back-link" href="{{ url_for('index') }}">返回首页</a>
+</body>
+</html>
