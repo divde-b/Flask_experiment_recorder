@@ -158,13 +158,16 @@ def delete(exp_id):
     """根据试验ID删除记录"""
     conn = get_db_connection()
     if not conn:
+        logger.error(f"删除实验 ID={exp_id} 时数据库连接失败")
         return "数据库连接失败"
     with conn.cursor() as cursor:
         try:
-            cursor.execute("DELETE FROM experiments WHERE exp_id = %s", (exp_id,))
+            cursor.execute("DELETE FROM experiments WHERE id = %s", (exp_id,))
             conn.commit()
+            logger.info(f"成功删除实验记录 ID={exp_id}")
         except Error as e:
             conn.rollback()
+            logger.exception(f"删除实验 ID={exp_id} 时发生异常: {e}")
             return f"删除失败: {e}"
         finally:
             conn.close()
@@ -177,6 +180,7 @@ def edit(exp_id):
     """编辑试验记录"""
     conn = get_db_connection()
     if not conn:
+        logger.error(f"编辑实验 ID={exp_id} 时数据库连接失败")
         return "数据库连接失败"
 
     if request.method == 'POST':
@@ -192,15 +196,17 @@ def edit(exp_id):
         with conn.cursor() as cursor:
             sql = """
                 UPDATE experiments
-                SET exp_name = %s, exp_date = %s attacker_ip = %s, target_ip = %s, gateway_ip = %s success = %s, notes = %s
+                SET exp_name = %s, exp_date = %s, attacker_ip = %s, target_ip = %s, gateway_ip = %s, success = %s, notes = %s
                 WHERE id=%s
             """
             values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, exp_id)
             try:
                 cursor.execute(sql, values)
                 conn.commit()
+                logger.info(f"成功更新实验记录 ID={exp_id}，新数据：{exp_name} / {exp_date}")
             except Error as e:
                 conn.rollback()
+                logger.exception(f"更新实验 ID={exp_id} 时发生异常: {e}")
                 return f"更新失败: {e}"
             finally:
                 conn.close()
@@ -208,11 +214,13 @@ def edit(exp_id):
 
     else:
         with conn.cursor() as cursor:
-            cursor.execute("SELECT * FROM experiments WHERE exp_id = %s", (exp_id,))
+            cursor.execute("SELECT * FROM experiments WHERE id = %s", (exp_id,))
             exp = cursor.fetchone()
         conn.close()
         if not exp:
+            logger.warning(f"尝试编辑不存在的实验记录 ID={exp_id}")
             return "记录不存在", 404
+        logger.debug(f"加载编辑表单 ID={exp_id}")
         return render_template('edit.html', exp=exp)
 
 

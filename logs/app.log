@@ -81,3 +81,39 @@
 2026-03-11 21:07:22,277 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:07:22] "GET /edit/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
 2026-03-11 21:07:22,285 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:07:22] "GET /edit/1?__debugger__=yes&cmd=resource&f=console.png&s=4SjxBxhXzbI6slTLwKwk HTTP/1.1" 200 -
 2026-03-11 21:07:22,312 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:07:22] "GET /edit/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-03-11 21:08:45,812 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-11 21:08:45,812 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-11 21:08:45,814 - werkzeug - INFO -  * Restarting with stat
+2026-03-11 21:08:46,107 - werkzeug - WARNING -  * Debugger is active!
+2026-03-11 21:08:46,112 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-11 21:08:47,867 - __main__ - INFO - 访问首页
+2026-03-11 21:08:47,882 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:08:47] "GET / HTTP/1.1" 200 -
+2026-03-11 21:08:47,965 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:08:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 21:16:53,208 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-11 21:16:53,208 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-11 21:16:53,209 - werkzeug - INFO -  * Restarting with stat
+2026-03-11 21:16:53,492 - werkzeug - WARNING -  * Debugger is active!
+2026-03-11 21:16:53,497 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-11 21:16:54,784 - __main__ - INFO - 访问首页
+2026-03-11 21:16:54,798 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:16:54] "GET / HTTP/1.1" 200 -
+2026-03-11 21:16:54,883 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:16:54] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-11 21:17:03,581 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:17:03] "GET /add HTTP/1.1" 200 -
+2026-03-11 21:17:03,589 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:17:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 21:17:07,193 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:17:07] "[35m[1mGET /edit/2 HTTP/1.1[0m" 500 -
+2026-03-11 21:17:07,200 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:17:07] "GET /edit/2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-03-11 21:17:07,202 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:17:07] "GET /edit/2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-03-11 21:17:07,209 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:17:07] "GET /edit/2?__debugger__=yes&cmd=resource&f=console.png&s=SerJgx3a1VUSvYE1rYMu HTTP/1.1" 200 -
+2026-03-11 21:17:07,227 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:17:07] "GET /edit/2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-03-11 21:22:42,909 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-11 21:22:42,909 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-11 21:22:42,911 - werkzeug - INFO -  * Restarting with stat
+2026-03-11 21:22:43,190 - werkzeug - WARNING -  * Debugger is active!
+2026-03-11 21:22:43,195 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-11 21:22:44,255 - __main__ - INFO - 访问首页
+2026-03-11 21:22:44,268 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:22:44] "GET / HTTP/1.1" 200 -
+2026-03-11 21:22:44,351 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:22:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-11 21:22:47,613 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:22:47] "GET /edit/2 HTTP/1.1" 200 -
+2026-03-11 21:22:47,621 - werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 21:22:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

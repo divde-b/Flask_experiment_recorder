@@ -135,3 +135,32 @@ form button:hover {
     display: inline-block;
     margin-top: 20px;
 }
+
+/* 修复操作列显示问题 */
+td:last-child {
+    white-space: nowrap;          /* 防止文字换行 */
+    line-height: 1.5;             /* 保证行高足够 */
+    padding: 8px 4px;             /* 适当的内边距 */
+}
+
+td:last-child a,
+td:last-child form {
+    display: inline;              /* 让编辑链接和删除表单并排 */
+    background: none;
+    padding: 0;
+    margin-right: 8px;            /* 两个按钮之间的间距 */
+    border: none;
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+td:last-child button {
+    background: none;
+    border: none;
+    color: #dc3545;               /* 删除按钮红色 */
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    vertical-align: middle;
+}
