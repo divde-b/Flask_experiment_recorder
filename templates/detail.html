@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta charset="UTF-8">
+    <title>实验详情</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>📋 实验详情</h1>
+    <div class="detail-card">
+        <p><strong>ID：</strong> {{ exp.id }}</p>
+        <p><strong>实验名称：</strong> {{ exp.exp_name }}</p>
+        <p><strong>实验日期：</strong> {{ exp.exp_date }}</p>
+        <p><strong>攻击机IP：</strong> {{ exp.attacker_ip or '无' }}</p>
+        <p><strong>靶机IP：</strong> {{ exp.target_ip or '无' }}</p>
+        <p><strong>网关IP：</strong> {{ exp.gateway_ip or '无' }}</p>
+        <p><strong>是否成功：</strong> {{ '✅' if exp.success else '❌' }}</p>
+        <p><strong>备注：</strong> {{ exp.notes or '无' }}</p>
+        <p><strong>创建时间：</strong> {{ exp.created_at }}</p>
+    </div>
+        <h2>📄 实验报告</h2>
+    <div class="report-content" id="report"></div>
+    <script>
+        const reportMarkdown = {{ exp.report | tojson | safe }};
+        document.getElementById('report').innerHTML = marked.parse(reportMarkdown);
+    </script>
+    <br>
+    <a href="{{ url_for('index') }}">← 返回首页</a>
+</body>
+</html>

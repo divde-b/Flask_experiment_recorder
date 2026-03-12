@@ -126,10 +126,11 @@ def add():
         with conn.cursor() as cursor:
             sql = """
                 INSERT INTO experiments 
-                (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes)
-                VALUES (%s, %s, %s, %s, %s, %s, %s)
+                (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                   """
-            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes)
+            report = request.form.get('report')
+            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report)
             try:
                 cursor.execute(sql, values)
                 conn.commit()
@@ -173,6 +174,19 @@ def delete(exp_id):
             conn.close()
     return redirect(url_for('index'))
 
+"""
+✅ RESTful路由设计
+
+✅ 参数化查询防止SQL注入
+
+✅ 完整的事务处理
+
+✅ 详细的日志记录
+
+✅ 错误处理机制
+
+✅ 代码结构清晰
+"""
 
 @app.route('/edit/<int:exp_id>', methods=['GET', 'POST'])
 #编辑路由
@@ -194,12 +208,13 @@ def edit(exp_id):
         notes = request.form['notes']
 
         with conn.cursor() as cursor:
+            report = request.form.get('report')
             sql = """
                 UPDATE experiments
-                SET exp_name = %s, exp_date = %s, attacker_ip = %s, target_ip = %s, gateway_ip = %s, success = %s, notes = %s
+                SET exp_name = %s, exp_date = %s, attacker_ip = %s, target_ip = %s, gateway_ip = %s, success = %s, notes = %s, report = %s
                 WHERE id=%s
             """
-            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, exp_id)
+            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report, exp_id)
             try:
                 cursor.execute(sql, values)
                 conn.commit()
@@ -222,6 +237,42 @@ def edit(exp_id):
             return "记录不存在", 404
         logger.debug(f"加载编辑表单 ID={exp_id}")
         return render_template('edit.html', exp=exp)
+
+"""
+查看：首页列表
+
+添加：新增记录
+
+编辑：修改现有记录
+
+删除：移除记录
+"""
+
+@app.route('/detail/<int:exp_id>')
+#详情页路由
+def detail(exp_id):
+    """显示单条试验记录的详细信息"""
+    conn = get_db_connection()
+    if not conn:
+        return "数据库连接失败"
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT * FROM experiments WHERE id = %s", (exp_id,))
+        exp = cursor.fetchone()
+    conn.close()
+    if not exp:
+        return "记录不存在", 404
+    return render_template('detail.html', exp=exp)
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

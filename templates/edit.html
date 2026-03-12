@@ -16,6 +16,8 @@
         <label>是否成功：</label><input type="checkbox" name="success" value="true" {% if exp.success %}checked{% endif %}><br>
         <label>备注：</label><textarea name="notes" rows="4">{{ exp.notes or '' }}</textarea><br>
         <button type="submit">更新</button>
+        <label>实验报告（可包含Markdown）：</label><br>
+<textarea name="report" rows="15" cols="80" placeholder=请输入文本>{{ exp.report if exp else '' }}</textarea><br><br>
     </form>
     <a class="back-link" href="{{ url_for('index') }}">← 返回首页</a>
 </body>

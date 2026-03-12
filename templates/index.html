@@ -36,6 +36,7 @@
                 <td>{{ exp.notes or '' }}</td>
                 <td>{{ exp.created_at }}</td>
                 <td>
+                    <a href="{{ url_for('detail', exp_id=exp.id) }}">查看</a>
                      <a href="{{ url_for('edit', exp_id=exp.id) }}" style="margin-right:10px;">编辑</a>
                     <form action="{{ url_for('delete', exp_id = exp.id) }}" method="post" style="display: inline">
                         <button type="submit" onclick="return confirm('确定删除该记录吗？');" style="background:none; border:none; color:#dc3545; cursor:pointer; text-decoration:underline;">删除</button>

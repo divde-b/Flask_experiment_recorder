@@ -164,3 +164,16 @@ td:last-child button {
     text-decoration: underline;
     vertical-align: middle;
 }
+/*写详情页时添加*/
+.detail-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px 0;
+}
+.detail-card p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
