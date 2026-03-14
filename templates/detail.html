@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/marked/4.2.12/marked.min.js"></script>
     <meta charset="UTF-8">
     <title>实验详情</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -21,6 +21,7 @@
     </div>
         <h2>📄 实验报告</h2>
     <div class="report-content" id="report"></div>
+    <!--调试代码用于实验报告不显示文字，<pre style="background:#eee; padding:10px;">{{ exp.report }}</pre>-->
     <script>
         const reportMarkdown = {{ exp.report | tojson | safe }};
         document.getElementById('report').innerHTML = marked.parse(reportMarkdown);
