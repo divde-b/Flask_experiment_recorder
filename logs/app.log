@@ -279,3 +279,40 @@
 2026-03-12 17:06:56,801 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:06:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 2026-03-12 17:06:58,081 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:06:58] "GET /detail/2 HTTP/1.1" 200 -
 2026-03-12 17:06:58,088 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:06:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:09:00,773 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-12 17:09:00,773 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-12 17:09:00,774 - werkzeug - INFO -  * Restarting with stat
+2026-03-12 17:09:00,987 - werkzeug - WARNING -  * Debugger is active!
+2026-03-12 17:09:00,992 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-12 17:09:02,265 - __main__ - INFO - 访问首页
+2026-03-12 17:09:02,277 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:02] "GET / HTTP/1.1" 200 -
+2026-03-12 17:09:02,360 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:09:06,116 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:06] "GET /edit/2 HTTP/1.1" 200 -
+2026-03-12 17:09:06,123 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:09:08,250 - __main__ - INFO - 成功更新实验记录 ID=2，新数据：ARP单向欺骗 / 2026-03-11
+2026-03-12 17:09:08,250 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:08] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2026-03-12 17:09:08,254 - __main__ - INFO - 访问首页
+2026-03-12 17:09:08,257 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:08] "GET / HTTP/1.1" 200 -
+2026-03-12 17:09:08,267 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:09:11,587 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:11] "GET /edit/2 HTTP/1.1" 200 -
+2026-03-12 17:09:11,594 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:09:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:10:17,803 - __main__ - INFO - 成功更新实验记录 ID=2，新数据：ARP单向欺骗 / 2026-03-11
+2026-03-12 17:10:17,804 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:17] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2026-03-12 17:10:17,807 - __main__ - INFO - 访问首页
+2026-03-12 17:10:17,827 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:17] "GET / HTTP/1.1" 200 -
+2026-03-12 17:10:17,836 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:10:19,678 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:19] "GET /detail/2 HTTP/1.1" 200 -
+2026-03-12 17:10:19,686 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:10:25,927 - __main__ - INFO - 访问首页
+2026-03-12 17:10:25,929 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:25] "GET / HTTP/1.1" 200 -
+2026-03-12 17:10:25,937 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:10:26,889 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:26] "GET /edit/2 HTTP/1.1" 200 -
+2026-03-12 17:10:26,896 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:10:42,948 - __main__ - INFO - 成功更新实验记录 ID=2，新数据：ARP单向欺骗 / 2026-03-11
+2026-03-12 17:10:42,948 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:42] "[32mPOST /edit/2 HTTP/1.1[0m" 302 -
+2026-03-12 17:10:42,951 - __main__ - INFO - 访问首页
+2026-03-12 17:10:42,968 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:42] "GET / HTTP/1.1" 200 -
+2026-03-12 17:10:42,977 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-12 17:10:44,945 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:44] "GET /detail/2 HTTP/1.1" 200 -
+2026-03-12 17:10:44,952 - werkzeug - INFO - 127.0.0.1 - - [12/Mar/2026 17:10:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
