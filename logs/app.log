@@ -531,3 +531,103 @@
 2026-03-14 17:34:49,545 - __main__ - INFO - 访问首页
 2026-03-14 17:34:49,573 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:34:49] "GET / HTTP/1.1" 200 -
 2026-03-14 17:34:49,581 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:34:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:36:32,743 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 17:36:32,743 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 17:36:32,744 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 17:36:32,947 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 17:36:32,952 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 17:36:34,623 - __main__ - INFO - 访问首页
+2026-03-14 17:36:34,636 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:36:34] "GET / HTTP/1.1" 200 -
+2026-03-14 17:36:34,710 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:36:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:36:42,546 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:36:42] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-14 17:36:42,554 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:36:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:37:06,759 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:37:06] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-14 17:37:06,766 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:37:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:43:10,738 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 17:43:10,738 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 17:43:10,739 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 17:43:10,955 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 17:43:10,960 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 17:43:12,183 - __main__ - INFO - 访问首页
+2026-03-14 17:43:12,216 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:43:12] "GET / HTTP/1.1" 200 -
+2026-03-14 17:43:12,278 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:43:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:43:50,803 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:43:50] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:43:50,811 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:43:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:48:04,598 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 17:48:04,598 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 17:48:04,598 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 17:48:04,805 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 17:48:04,810 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 17:48:06,265 - __main__ - INFO - 访问首页
+2026-03-14 17:48:06,278 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:06] "GET / HTTP/1.1" 200 -
+2026-03-14 17:48:06,355 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:48:09,711 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:09] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:48:09,717 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:48:15,898 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:15] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:48:15,906 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:15] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-14 17:48:15,919 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-14 17:48:16,451 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:16] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:48:16,460 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:16] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-14 17:48:16,473 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-14 17:48:16,805 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:16] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:48:16,811 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:16] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-14 17:48:16,822 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-14 17:48:17,021 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:17] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:48:17,028 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:17] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-14 17:48:17,042 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-14 17:48:17,225 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:17] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:48:17,233 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:17] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-14 17:48:17,246 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:48:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-14 17:49:41,580 - __main__ - INFO - 访问首页
+2026-03-14 17:49:41,584 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:49:41] "GET / HTTP/1.1" 200 -
+2026-03-14 17:49:41,629 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:49:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:51:12,423 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 17:51:12,423 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 17:51:12,424 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 17:51:12,631 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 17:51:12,636 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 17:51:14,235 - __main__ - INFO - 访问首页
+2026-03-14 17:51:14,248 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:51:14] "GET / HTTP/1.1" 200 -
+2026-03-14 17:51:14,353 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:51:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:51:25,533 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:51:25] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:51:25,540 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:51:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:52:04,077 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 17:52:04,077 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 17:52:04,078 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 17:52:04,272 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 17:52:04,277 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 17:52:07,448 - __main__ - INFO - 访问首页
+2026-03-14 17:52:07,460 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:52:07] "GET / HTTP/1.1" 200 -
+2026-03-14 17:52:07,542 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:52:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:52:09,129 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:52:09] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:52:09,135 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:52:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:53:33,090 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 17:53:33,090 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 17:53:33,091 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 17:53:33,279 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 17:53:33,286 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 17:53:34,824 - __main__ - INFO - 访问首页
+2026-03-14 17:53:34,836 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:53:34] "GET / HTTP/1.1" 200 -
+2026-03-14 17:53:34,914 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:53:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:53:40,437 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:53:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:53:40,451 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:53:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-14 17:54:05,701 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:54:05] "GET /add HTTP/1.1" 200 -
+2026-03-14 17:54:05,724 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:54:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:54:05,743 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:54:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-14 17:57:55,850 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 17:57:55,850 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 17:57:55,851 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 17:57:56,056 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 17:57:56,061 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 17:57:57,023 - __main__ - INFO - 访问首页
+2026-03-14 17:57:57,036 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:57:57] "GET / HTTP/1.1" 200 -
+2026-03-14 17:57:57,111 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:57:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:58:15,985 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:58:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 17:58:15,999 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:58:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
