@@ -179,17 +179,12 @@ def delete(exp_id):
     return redirect(url_for('index'))
 
 """
-✅ RESTful路由设计
-
-✅ 参数化查询防止SQL注入
-
-✅ 完整的事务处理
-
-✅ 详细的日志记录
-
-✅ 错误处理机制
-
-✅ 代码结构清晰
+RESTful路由设计
+参数化查询防止SQL注入
+完整的事务处理
+详细的日志记录
+错误处理机制
+代码结构清晰
 """
 
 @app.route('/edit/<int:exp_id>', methods=['GET', 'POST'])
@@ -244,11 +239,8 @@ def edit(exp_id):
 
 """
 查看：首页列表
-
 添加：新增记录
-
 编辑：修改现有记录
-
 删除：移除记录
 """
 
@@ -267,6 +259,48 @@ def detail(exp_id):
         return "记录不存在", 404
     return render_template('detail.html', exp=exp)
 
+"""
+查看单条试验记录的完整信息
+GET请求，通过ID查询单挑记录
+简洁的只读展示页面
+"""
+
+@app.route('/search')
+#搜寻路由
+def search():
+    q = request.args.get('q','').strip()
+    if not q:
+        return redirect(url_for('index'))
+
+    conn = get_db_connection()
+    if not conn:
+        logger.error("搜索时连接数据库失败")
+        return "数据库连接失败"
+
+    with conn.cursor() as cursor:
+        #使用LIKE模糊匹配多个字段
+        sql = """
+            SELECT * FROM experiments
+            WHERE exp_name LIKE %s OR notes LIKE %s OR report LIKE %s
+            ORDER BY exp_date DESC  
+        """
+        like_term = f"%{q}%"
+        try:
+            cursor.execute(sql, (like_term, like_term, like_term))
+            experiments = cursor.fetchall()
+            logger.info(f"搜索关键词 '{q}',找到{len(experiments)}条记录")
+        except Error as e:
+            logger.exception("搜索时发生异常")
+            experiments = []
+        finally:
+            conn.close()
+    return render_template('index.html', experiments=experiments, search_query=q)
+
+"""
+全文搜索，支持多个字段模糊匹配
+GET请求，LIKE模糊查询
+多字段搜索，结果按日期排序
+"""
 
 
 if __name__ == '__main__':

@@ -6,8 +6,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>我的网络试验记录</h1>
-    <a href="{{ url_for('add') }}">添加新实验</a>
+    <h1>网络试验记录</h1>
+    <a class="btn-add" href="{{ url_for('add') }}">添加新实验</a>
+
+    <!--搜索框区域-->
+    <form action="{{ url_for('search') }}" method="get" style="margin: 20px 0;">
+        <input type="text" name="q" placeholder="搜索实验名称、备注或报告..." value="{{ request.args.get('q', '') }}" style="padding: 6px; width: 300px;">
+        <button type="submit" style="padding: 6px 12px;">搜索</button>
+    </form>
+
     <table>
         <thead>
         <tr>
@@ -50,5 +57,9 @@
             {% endfor %}
         </tbody>
     </table>
+    <!--如果是从搜返回的，可以加一个返回首页的链接-->
+    {% if request.args.get('q') %}
+    <p><a href="{{ url_for('index') }}">返回全部记录</a></p>
+    {% endif %}
 </body>
 </html>

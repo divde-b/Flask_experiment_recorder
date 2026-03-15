@@ -864,3 +864,200 @@
 2026-03-15 09:58:19,015 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:19] "GET /static/images/ARP实验拓扑.png HTTP/1.1" 200 -
 2026-03-15 09:58:19,015 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:19] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
 2026-03-15 09:58:19,016 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:19] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-15 10:00:51,364 - __main__ - INFO - 访问首页
+2026-03-15 10:00:51,386 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 10:00:51] "GET / HTTP/1.1" 200 -
+2026-03-15 10:00:51,393 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 10:00:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 10:00:56,661 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 10:00:56] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 10:00:56,669 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 10:00:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:27:35,904 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 11:27:35,905 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 11:27:35,905 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 11:27:36,137 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 11:27:36,142 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 11:27:37,495 - __main__ - INFO - 访问首页
+2026-03-15 11:27:37,510 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:37] "GET / HTTP/1.1" 200 -
+2026-03-15 11:27:37,597 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:27:47,149 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:47] "[35m[1mGET /search?q= HTTP/1.1[0m" 500 -
+2026-03-15 11:27:47,156 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:47] "GET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-03-15 11:27:47,157 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:47] "GET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-03-15 11:27:47,163 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:47] "GET /search?__debugger__=yes&cmd=resource&f=console.png&s=9BCYJfP7MmFZN3534QXi HTTP/1.1" 200 -
+2026-03-15 11:27:47,178 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:47] "GET /search?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-03-15 11:27:55,676 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:55] "[35m[1mGET /search?q=ARP HTTP/1.1[0m" 500 -
+2026-03-15 11:27:55,683 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:55] "[36mGET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:27:55,685 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:55] "[36mGET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-15 11:27:55,690 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:55] "[36mGET /search?__debugger__=yes&cmd=resource&f=console.png&s=9BCYJfP7MmFZN3534QXi HTTP/1.1[0m" 304 -
+2026-03-15 11:27:59,811 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:59] "[35m[1mGET /search?q=ARP HTTP/1.1[0m" 500 -
+2026-03-15 11:27:59,817 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:59] "[36mGET /search?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:27:59,818 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:59] "[36mGET /search?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-15 11:27:59,822 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:27:59] "[36mGET /search?__debugger__=yes&cmd=resource&f=console.png&s=9BCYJfP7MmFZN3534QXi HTTP/1.1[0m" 304 -
+2026-03-15 11:29:34,355 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 11:29:34,356 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 11:29:34,356 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 11:29:34,583 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 11:29:34,588 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 11:30:05,306 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 11:30:05,306 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 11:30:05,307 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 11:30:05,530 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 11:30:05,535 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 11:30:08,155 - __main__ - INFO - 访问首页
+2026-03-15 11:30:08,169 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:08] "GET / HTTP/1.1" 200 -
+2026-03-15 11:30:08,250 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:30:13,871 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:13] "[32mGET /search?q= HTTP/1.1[0m" 302 -
+2026-03-15 11:30:13,876 - __main__ - INFO - 访问首页
+2026-03-15 11:30:13,879 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:13] "GET / HTTP/1.1" 200 -
+2026-03-15 11:30:13,887 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:30:20,112 - __main__ - ERROR - 搜索时发生异常
+Traceback (most recent call last):
+  File "D:\OneDrive\Desktop\flask_mysql_demo\app.py", line 282, in search
+    cursor.execute(sql, (like_term, like_term, like_term))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '%ARP%' OR notes LIKE '%ARP%' OR report LIKE '%ARP%'\n            ORDER BY exp_' at line 2")
+2026-03-15 11:30:20,116 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:20] "GET /search?q=ARP HTTP/1.1" 200 -
+2026-03-15 11:30:20,123 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:30:27,742 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:27] "GET /add HTTP/1.1" 200 -
+2026-03-15 11:30:27,749 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:30:30,557 - __main__ - ERROR - 搜索时发生异常
+Traceback (most recent call last):
+  File "D:\OneDrive\Desktop\flask_mysql_demo\app.py", line 282, in search
+    cursor.execute(sql, (like_term, like_term, like_term))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '%ARP%' OR notes LIKE '%ARP%' OR report LIKE '%ARP%'\n            ORDER BY exp_' at line 2")
+2026-03-15 11:30:30,559 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:30] "GET /search?q=ARP HTTP/1.1" 200 -
+2026-03-15 11:30:30,566 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:30:33,226 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:33] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 11:30:33,234 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:30:34,526 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:34] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-15 11:30:34,527 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:34] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-15 11:30:34,528 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:34] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-15 11:30:40,114 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:40] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 11:30:40,120 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:30:45,382 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:45] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 11:30:45,389 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:30:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:34:49,577 - __main__ - ERROR - 搜索时发生异常
+Traceback (most recent call last):
+  File "D:\OneDrive\Desktop\flask_mysql_demo\app.py", line 282, in search
+    cursor.execute(sql, (like_term, like_term, like_term))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '%欺骗%' OR notes LIKE '%欺骗%' OR report LIKE '%欺骗%'\n            ORDE' at line 2")
+2026-03-15 11:34:49,579 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:34:49] "GET /search?q=欺骗 HTTP/1.1" 200 -
+2026-03-15 11:34:49,586 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:34:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:34:52,318 - __main__ - INFO - 访问首页
+2026-03-15 11:34:52,321 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:34:52] "GET / HTTP/1.1" 200 -
+2026-03-15 11:34:52,327 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:34:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 11:35:00,233 - __main__ - ERROR - 搜索时发生异常
+Traceback (most recent call last):
+  File "D:\OneDrive\Desktop\flask_mysql_demo\app.py", line 282, in search
+    cursor.execute(sql, (like_term, like_term, like_term))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+    ~~~~~~~~~~~^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\OneDrive\Desktop\flask_mysql_demo\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= '%ARP双向欺骗%' OR notes LIKE '%ARP双向欺骗%' OR report LIKE '%ARP双å' at line 2")
+2026-03-15 11:35:00,234 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:35:00] "GET /search?q=ARP双向欺骗 HTTP/1.1" 200 -
+2026-03-15 11:35:00,240 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 11:35:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 16:52:46,124 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 16:52:46,124 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 16:52:46,125 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 16:52:46,349 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 16:52:46,354 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 16:52:47,582 - __main__ - INFO - 访问首页
+2026-03-15 16:52:47,598 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:52:47] "GET / HTTP/1.1" 200 -
+2026-03-15 16:52:47,695 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:52:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 16:52:51,888 - __main__ - INFO - 搜索关键词 'ARP',找到1条记录
+2026-03-15 16:52:51,889 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:52:51] "GET /search?q=ARP HTTP/1.1" 200 -
+2026-03-15 16:52:51,897 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:52:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 16:52:57,547 - __main__ - INFO - 搜索关键词 'ARP',找到1条记录
+2026-03-15 16:52:57,548 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:52:57] "GET /search?q=ARP HTTP/1.1" 200 -
+2026-03-15 16:52:57,555 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:52:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 16:53:12,089 - __main__ - INFO - 搜索关键词 'ARP双向欺骗',找到1条记录
+2026-03-15 16:53:12,090 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:53:12] "GET /search?q=ARP双向欺骗 HTTP/1.1" 200 -
+2026-03-15 16:53:12,096 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:53:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 16:53:14,639 - __main__ - INFO - 访问首页
+2026-03-15 16:53:14,659 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:53:14] "GET / HTTP/1.1" 200 -
+2026-03-15 16:53:14,665 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:53:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
