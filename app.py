@@ -1,5 +1,5 @@
 """
-
+使用Flask+Python+MySQL的全栈开发，用于记录网络实验。
 """
 
 from flask import Flask, render_template, request, redirect, url_for

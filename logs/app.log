@@ -631,3 +631,236 @@
 2026-03-14 17:57:57,111 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:57:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 2026-03-14 17:58:15,985 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:58:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 2026-03-14 17:58:15,999 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 17:58:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-14 18:10:21,530 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 18:10:21,530 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 18:10:21,531 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 18:10:21,742 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 18:10:21,747 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 18:10:23,042 - __main__ - INFO - 访问首页
+2026-03-14 18:10:23,056 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 18:10:23] "GET / HTTP/1.1" 200 -
+2026-03-14 18:10:23,153 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 18:10:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 18:10:35,888 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 18:10:35] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-14 18:10:35,896 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 18:10:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 18:11:08,097 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 18:11:08] "GET /add HTTP/1.1" 200 -
+2026-03-14 18:11:08,104 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 18:11:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 18:11:43,973 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 18:11:43] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-14 18:11:43,980 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 18:11:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 21:49:27,702 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 21:49:27,702 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 21:49:27,703 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 21:49:27,929 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 21:49:27,934 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 21:49:29,711 - __main__ - INFO - 访问首页
+2026-03-14 21:49:29,735 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:49:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-14 21:49:29,876 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:49:29] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-03-14 21:49:29,877 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:49:29] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-03-14 21:49:29,902 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:49:29] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=xEEtWeFyOJvEx5fZm2P1 HTTP/1.1" 200 -
+2026-03-14 21:49:29,930 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:49:29] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-03-14 21:50:43,034 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 21:50:43,034 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 21:50:43,035 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 21:50:43,250 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 21:50:43,255 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 21:50:44,943 - __main__ - INFO - 访问首页
+2026-03-14 21:50:44,966 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:50:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-14 21:50:45,089 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:50:45] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-14 21:50:45,089 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:50:45] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-14 21:50:45,120 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:50:45] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=yFVXxUEDwtrBT3l8XQfH HTTP/1.1" 200 -
+2026-03-14 21:53:52,452 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 21:53:52,452 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 21:53:52,453 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 21:53:52,679 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 21:53:52,684 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 21:53:54,516 - __main__ - INFO - 访问首页
+2026-03-14 21:53:54,538 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:53:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-14 21:53:54,667 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:53:54] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-03-14 21:53:54,668 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:53:54] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-03-14 21:53:54,692 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 21:53:54] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=MeFNqv09JDQRr8mSoG4s HTTP/1.1" 200 -
+2026-03-14 22:09:36,885 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 22:09:36,886 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 22:09:36,886 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 22:09:37,099 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 22:09:37,104 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 22:09:44,032 - __main__ - INFO - 访问首页
+2026-03-14 22:09:44,088 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:09:44] "GET / HTTP/1.1" 200 -
+2026-03-14 22:09:44,177 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:09:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 22:09:44,222 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:09:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-14 22:11:09,853 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:11:09] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-14 22:11:09,861 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:11:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 22:11:17,879 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:11:17] "GET /add HTTP/1.1" 200 -
+2026-03-14 22:11:17,886 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:11:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 22:11:26,088 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:11:26] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-14 22:11:26,095 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:11:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 22:13:54,447 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 22:13:54,447 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 22:13:54,448 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 22:13:54,682 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 22:13:54,688 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 22:13:56,315 - __main__ - INFO - 访问首页
+2026-03-14 22:13:56,329 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:13:56] "GET / HTTP/1.1" 200 -
+2026-03-14 22:13:56,418 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:13:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-14 22:23:32,330 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-14 22:23:32,331 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-14 22:23:32,332 - werkzeug - INFO -  * Restarting with stat
+2026-03-14 22:23:32,549 - werkzeug - WARNING -  * Debugger is active!
+2026-03-14 22:23:32,555 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-14 22:23:36,996 - __main__ - INFO - 访问首页
+2026-03-14 22:23:37,025 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:23:37] "GET / HTTP/1.1" 200 -
+2026-03-14 22:23:37,112 - werkzeug - INFO - 127.0.0.1 - - [14/Mar/2026 22:23:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 08:08:31,276 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 08:08:31,276 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 08:08:31,277 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 08:08:31,507 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 08:08:31,513 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 08:08:32,805 - __main__ - INFO - 访问首页
+2026-03-15 08:08:32,819 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:08:32] "GET / HTTP/1.1" 200 -
+2026-03-15 08:08:32,899 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:08:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 08:08:36,404 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:08:36] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 08:08:36,411 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:08:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 08:12:03,002 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 08:12:03,002 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:12:03] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 08:12:03,005 - __main__ - INFO - 访问首页
+2026-03-15 08:12:03,021 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:12:03] "GET / HTTP/1.1" 200 -
+2026-03-15 08:12:03,032 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:12:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 08:12:05,198 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:12:05] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 08:12:05,206 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:12:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 08:12:36,570 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:12:36] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 08:12:36,577 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:12:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 08:14:37,339 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 08:14:37,340 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:14:37] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 08:14:37,344 - __main__ - INFO - 访问首页
+2026-03-15 08:14:37,346 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:14:37] "GET / HTTP/1.1" 200 -
+2026-03-15 08:14:37,358 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:14:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 08:14:39,009 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:14:39] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 08:14:39,016 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:14:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 08:41:27,585 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:41:27] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 08:41:27,592 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 08:41:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:00:51,710 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:00:51] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:00:51,718 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:00:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:12:40,674 - __main__ - INFO - 访问首页
+2026-03-15 09:12:40,679 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:12:40] "GET / HTTP/1.1" 200 -
+2026-03-15 09:12:40,704 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:12:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:12:46,878 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:12:46] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 09:12:46,885 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:12:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:13:04,619 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 09:13:04,620 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:13:04] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 09:13:04,623 - __main__ - INFO - 访问首页
+2026-03-15 09:13:04,626 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:13:04] "GET / HTTP/1.1" 200 -
+2026-03-15 09:13:04,637 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:13:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:13:06,064 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:13:06] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:13:06,072 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:13:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:13:41,329 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:13:41] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 09:13:41,336 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:13:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:14:04,489 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 09:14:04,489 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:14:04] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 09:14:04,492 - __main__ - INFO - 访问首页
+2026-03-15 09:14:04,495 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:14:04] "GET / HTTP/1.1" 200 -
+2026-03-15 09:14:04,505 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:14:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:14:05,999 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:14:05] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:14:06,007 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:14:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:14:23,376 - __main__ - INFO - 访问首页
+2026-03-15 09:14:23,379 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:14:23] "GET / HTTP/1.1" 200 -
+2026-03-15 09:14:23,386 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:14:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:20:21,737 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 09:20:21,738 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 09:20:21,738 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 09:20:21,963 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 09:20:21,967 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 09:20:23,113 - __main__ - INFO - 访问首页
+2026-03-15 09:20:23,129 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:20:23] "GET / HTTP/1.1" 200 -
+2026-03-15 09:20:23,224 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:20:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:20:27,198 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:20:27] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:20:27,206 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:20:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:44:51,775 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 09:44:51,775 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 09:44:51,776 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 09:44:51,999 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 09:44:52,004 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 09:44:52,908 - __main__ - INFO - 访问首页
+2026-03-15 09:44:52,921 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:44:52] "GET / HTTP/1.1" 200 -
+2026-03-15 09:44:53,001 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:44:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:45:03,287 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:45:03] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 09:45:03,296 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:45:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:45:33,380 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 09:45:33,381 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:45:33] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 09:45:33,384 - __main__ - INFO - 访问首页
+2026-03-15 09:45:33,387 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:45:33] "GET / HTTP/1.1" 200 -
+2026-03-15 09:45:33,398 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:45:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:45:34,720 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:45:34] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:45:34,728 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:45:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:45:35,783 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:45:35] "[33mGET /detail/Photo/攻击前靶机ARP表.png HTTP/1.1[0m" 404 -
+2026-03-15 09:48:50,728 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 09:48:50,728 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 09:48:50,729 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 09:48:50,950 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 09:48:50,954 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 09:48:52,322 - __main__ - INFO - 访问首页
+2026-03-15 09:48:52,338 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:48:52] "GET / HTTP/1.1" 200 -
+2026-03-15 09:48:52,431 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:48:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:48:56,359 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:48:56] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 09:48:56,369 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:48:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:49:32,719 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 09:49:32,719 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:49:32] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 09:49:32,723 - __main__ - INFO - 访问首页
+2026-03-15 09:49:32,748 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:49:32] "GET / HTTP/1.1" 200 -
+2026-03-15 09:49:32,758 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:49:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:49:34,239 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:49:34] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:49:34,247 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:49:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:49:35,268 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:49:35] "[33mGET /detail/static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 404 -
+2026-03-15 09:50:38,452 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:50:38] "GET /static/images/攻击前靶机ARP表.png HTTP/1.1" 200 -
+2026-03-15 09:51:04,029 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:51:04] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 09:51:04,035 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:51:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:51:16,679 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 09:51:16,679 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:51:16] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 09:51:16,683 - __main__ - INFO - 访问首页
+2026-03-15 09:51:16,709 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:51:16] "GET / HTTP/1.1" 200 -
+2026-03-15 09:51:16,719 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:51:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:51:18,204 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:51:18] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:51:18,212 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:51:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:51:19,230 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:51:19] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-15 09:53:06,485 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:53:06] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 09:53:06,493 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:53:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:54:06,183 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 09:54:06,183 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:54:06] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 09:54:06,187 - __main__ - INFO - 访问首页
+2026-03-15 09:54:06,207 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:54:06] "GET / HTTP/1.1" 200 -
+2026-03-15 09:54:06,217 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:54:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:54:07,588 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:54:07] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:54:07,597 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:54:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:54:08,786 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:54:08] "GET /static/images/攻击后ARP表.png HTTP/1.1" 200 -
+2026-03-15 09:54:08,787 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:54:08] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-15 09:57:39,280 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-15 09:57:39,280 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-15 09:57:39,281 - werkzeug - INFO -  * Restarting with stat
+2026-03-15 09:57:39,504 - werkzeug - WARNING -  * Debugger is active!
+2026-03-15 09:57:39,509 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-15 09:57:39,521 - __main__ - INFO - 访问首页
+2026-03-15 09:57:39,532 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:57:39] "GET / HTTP/1.1" 200 -
+2026-03-15 09:57:39,596 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:57:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:57:42,007 - __main__ - INFO - 访问首页
+2026-03-15 09:57:42,010 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:57:42] "GET / HTTP/1.1" 200 -
+2026-03-15 09:57:42,043 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:57:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:57:47,568 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:57:47] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-15 09:57:47,575 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:57:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:58:16,681 - __main__ - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-15 09:58:16,681 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:16] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-15 09:58:16,686 - __main__ - INFO - 访问首页
+2026-03-15 09:58:16,688 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:16] "GET / HTTP/1.1" 200 -
+2026-03-15 09:58:16,699 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:58:17,983 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:17] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-15 09:58:17,991 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-15 09:58:19,015 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:19] "GET /static/images/ARP实验拓扑.png HTTP/1.1" 200 -
+2026-03-15 09:58:19,015 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:19] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-15 09:58:19,016 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 09:58:19] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
