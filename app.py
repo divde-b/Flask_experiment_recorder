@@ -6,16 +6,20 @@ from flask import Flask, render_template, request, redirect, url_for
 import pymysql
 from pymysql import Error
 from pymysql.cursors import DictCursor
-
 import logging
 from logging.handlers import RotatingFileHandler
 import os
+from flask import flash
 """
 使用Flask Web框架核心
 pymysql mysql数据库连接库
 logging 日志记录模块，用于记录运行信息
 os 操作系统接口，用于文件路径操作
+flash消息提示密码成功或错误
 """
+
+#管理员密码
+ADMIN_PASSWORD = 'Zls292524'
 
 #确保日志目录存在
 log_dir = 'logs'
@@ -62,6 +66,10 @@ app = Flask(__name__)
 """
 创建Flask应用实例
 """
+
+#flash
+app.secret_key = 'dakjgkjas4364'
+
 
 #数据库连接配置
 db_config = {
@@ -160,7 +168,14 @@ GET请求 显示添加到表单页面
 @app.route('/delete/<int:exp_id>', methods=['POST'])
 #删除路由
 def delete(exp_id):
-    """根据试验ID删除记录"""
+    #获取前端传来的密码
+    password = request.form.get('password','')
+    if password != ADMIN_PASSWORD:
+        logger.warning(f"尝试删除记录 ID={exp_id} 但密码错误")
+        flash('密码错误删除失败','danger')
+        #返回错误页面
+        return redirect(url_for('index'))
+
     conn = get_db_connection()
     if not conn:
         logger.error(f"删除实验 ID={exp_id} 时数据库连接失败")
@@ -176,6 +191,7 @@ def delete(exp_id):
             return f"删除失败: {e}"
         finally:
             conn.close()
+    flash('记录已删除','danger')
     return redirect(url_for('index'))
 
 """

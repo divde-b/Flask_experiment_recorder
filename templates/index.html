@@ -5,6 +5,15 @@
     <title>实验记录系统</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+    {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
 <body>
     <h1>网络试验记录</h1>
     <a class="btn-add" href="{{ url_for('add') }}">添加新实验</a>
@@ -44,10 +53,8 @@
                 <td>{{ exp.created_at }}</td>
                 <td>
                     <a href="{{ url_for('detail', exp_id=exp.id) }}">查看</a>
-                     <a href="{{ url_for('edit', exp_id=exp.id) }}" style="margin-right:10px;">编辑</a>
-                    <form action="{{ url_for('delete', exp_id = exp.id) }}" method="post" style="display: inline">
-                        <button type="submit" onclick="return confirm('确定删除该记录吗？');" style="background:none; border:none; color:#dc3545; cursor:pointer; text-decoration:underline;">删除</button>
-                    </form>
+                    <a href="{{ url_for('edit', exp_id=exp.id) }}" style="margin-right:10px;">编辑</a>
+                    <button onclick="deleteWithPassword({{ exp.id }})" style="background:none; border:none; color:#dc3545; cursor:pointer; text-decoration:underline;">删除</button>
                 </td>
             </tr>
             {% else %}
@@ -61,5 +68,25 @@
     {% if request.args.get('q') %}
     <p><a href="{{ url_for('index') }}">返回全部记录</a></p>
     {% endif %}
+    <script>
+        function deleteWithPassword(exp_id) {
+            const password = prompt('请输入管理员密码: ');
+            if (password === null) {
+                return; //用户点击了取消
+            }
+            //创建一个隐藏表单，动态提交
+            const from = document.createElement('form');
+            from.method = 'POST';
+            form.action = '/delete/${exp_id}';
+            //添加密码字段
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'password';
+            input.value = password;
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
 </body>
 </html>

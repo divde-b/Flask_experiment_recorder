@@ -1061,3 +1061,14 @@ pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; chec
 2026-03-15 16:53:14,639 - __main__ - INFO - 访问首页
 2026-03-15 16:53:14,659 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:53:14] "GET / HTTP/1.1" 200 -
 2026-03-15 16:53:14,665 - werkzeug - INFO - 127.0.0.1 - - [15/Mar/2026 16:53:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-16 08:36:26,966 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-16 08:36:26,966 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-16 08:36:26,967 - werkzeug - INFO -  * Restarting with stat
+2026-03-16 08:36:27,196 - werkzeug - WARNING -  * Debugger is active!
+2026-03-16 08:36:27,202 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-16 08:36:28,385 - __main__ - INFO - 访问首页
+2026-03-16 08:36:28,418 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2026 08:36:28] "GET / HTTP/1.1" 200 -
+2026-03-16 08:36:28,519 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2026 08:36:28] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-16 08:42:56,763 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2026 08:42:56] "GET /add HTTP/1.1" 200 -
+2026-03-16 08:42:56,771 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2026 08:42:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
