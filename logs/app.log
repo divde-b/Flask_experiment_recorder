@@ -1072,3 +1072,32 @@ pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; chec
 2026-03-16 08:36:28,519 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2026 08:36:28] "GET /static/style.css HTTP/1.1" 200 -
 2026-03-16 08:42:56,763 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2026 08:42:56] "GET /add HTTP/1.1" 200 -
 2026-03-16 08:42:56,771 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2026 08:42:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-19 13:38:30,682 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-19 13:38:30,682 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-19 13:38:30,683 - werkzeug - INFO -  * Restarting with stat
+2026-03-19 13:38:30,929 - werkzeug - WARNING -  * Debugger is active!
+2026-03-19 13:38:30,937 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-19 13:38:32,718 - routes.experiments - INFO - 访问首页
+2026-03-19 13:38:32,736 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:32] "GET / HTTP/1.1" 200 -
+2026-03-19 13:38:32,814 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-19 13:38:32,853 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-19 13:38:42,326 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:42] "[32mGET /search?q= HTTP/1.1[0m" 302 -
+2026-03-19 13:38:42,331 - routes.experiments - INFO - 访问首页
+2026-03-19 13:38:42,346 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:42] "GET / HTTP/1.1" 200 -
+2026-03-19 13:38:42,356 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-19 13:38:45,198 - routes.experiments - INFO - 搜索关键词 'python',找到0条记录
+2026-03-19 13:38:45,200 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:45] "GET /search?q=python HTTP/1.1" 200 -
+2026-03-19 13:38:45,208 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-19 13:38:55,613 - routes.experiments - INFO - 搜索关键词 'ARP',找到1条记录
+2026-03-19 13:38:55,614 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:55] "GET /search?q=ARP HTTP/1.1" 200 -
+2026-03-19 13:38:55,622 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-19 13:38:59,381 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:59] "GET /add HTTP/1.1" 200 -
+2026-03-19 13:38:59,389 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:38:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-19 13:39:03,464 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:39:03] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-19 13:39:03,474 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:39:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-19 13:39:04,948 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:39:04] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-19 13:39:04,949 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:39:04] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-19 13:39:04,949 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:39:04] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-19 13:39:26,821 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:39:26] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-19 13:39:26,828 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 13:39:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
