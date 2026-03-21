@@ -1,3 +1,6 @@
+"""
+主文件，日志格式，操作系统文件，
+"""
 from flask import Flask
 from routes.experiments import experiments_bp
 import logging
@@ -36,19 +39,8 @@ logging.basicConfig(
 #获取当前模块的logger
 logger = logging.getLogger(__name__)
 
-"""
-创建logs目录（如果不存在）
-配置日志格式
-设置文件处理器，每个日志文件最大1MB，保留5个备份
-设置控制台处理器
-配置根日志记录器
-"""
-
+#创建Flask应用实例
 app = Flask(__name__)
-
-"""
-创建Flask应用实例
-"""
 
 #flash
 app.secret_key = 'dakjgkjas4364'

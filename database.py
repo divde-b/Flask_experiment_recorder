@@ -1,6 +1,9 @@
-import pymysql
+"""
+数据库连接配置文件
+"""
+import pymysql#连接数据库
 from pymysql import Error
-import logging
+import logging#日志
 from pymysql.cursors import DictCursor
 
 logger = logging.getLogger(__name__)

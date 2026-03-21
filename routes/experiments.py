@@ -1,3 +1,6 @@
+"""
+路由文件，蓝图
+"""
 from flask import Blueprint, render_template, request, redirect, url_for, current_app, flash
 from pymysql import Error
 from database import get_db_connection
