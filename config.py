@@ -12,5 +12,5 @@ class Config:
     DB_HOST = 'localhost'
     DB_USER = 'root'
     DB_PASSWORD = os.environ.get('DB_PASSWORD') or 'zls29252431233'
-    DB_NAME = 'expriment_db'
+    DB_NAME = 'experiment_db'
     DB_CURSORCLASS = 'pymysql.cursors.DictCursor'

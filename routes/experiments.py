@@ -1,5 +1,7 @@
 """
-路由文件，蓝图
+实验记录管理蓝图
+包含实验记录的增删改查、搜索、详情页展示功能。
+所有路由都挂载在 / 路径下（无前缀）。
 """
 
 from flask import Blueprint, render_template, request, redirect, url_for, current_app, flash
@@ -10,12 +12,18 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+#创建蓝图实例，url_pre==erfix=''表示无前缀，即路由直接挂载在根路径
 experiments_bp = Blueprint('experiments', __name__, url_prefix='')
 
 
 @experiments_bp.route('/')
 #首页路由
 def index():
+    """
+    显示所有试验记录，按日期倒序排序。
+    如果数据库连接失败，返回错误提示信息
+    :return:
+    """
     logger.info("访问首页")
     conn = get_db_connection()
     if not conn:
@@ -31,18 +39,18 @@ def index():
             return "查询失败"
     conn.close()
     return render_template('index.html', experiments=experiments)
-"""
-记录访问日志
-连接数据库
-查询所有实验记录，按日期降序排序
-渲染index.html模板，传递试验记录数据
-如果查询失败，返回错误信息
-"""
 
 @experiments_bp.route('/add', methods=['GET', 'POST'])
 #实验记录路由
 def add():
+    """
+    添加新实验记录
+    GET:显示表单页面
+    POST:获取表单数据，插入数据库，成功后重定向到首页。
+    :return:
+    """
     if request.method == 'POST':
+        #获取表单数据（使用.get（）避免缺少字段报错）
         exp_name = request.form['exp_name']
         exp_date = request.form['exp_date']
         attacker_ip = request.form['attacker_ip']
@@ -50,6 +58,7 @@ def add():
         gateway_ip = request.form['gateway_ip']
         success = True if request.form.get('success') else False
         notes = request.form['notes']
+        report = request.form['report']  #实验报告（Markdown）
 
         conn = get_db_connection()
         if not conn:
@@ -72,20 +81,18 @@ def add():
                 return f"插入失败: {e}"
             conn.close()
             return redirect(url_for('experiments.index'))
+    #GET请求：显示添加表单
     return render_template('add.html')
-"""
-POST 请求处理（提交表单）
-从表单获取数据
-连接数据库
-执行INSERT语句（插入）
-提交事务
-重定向到首页
-GET请求 显示添加到表单页面
-"""
 
 @experiments_bp.route('/delete/<int:exp_id>', methods=['POST'])
 #删除路由
 def delete(exp_id):
+    """
+    删除试验记录（需要提供管理员密码）
+    前端通过隐藏表单提交密码，后端验证后执行删除。
+    :param exp_id:
+    :return:
+    """
     #获取前端传来的密码
     password = request.form.get('password','')
     if password != current_app.config['ADMIN_PASSWORD']:
@@ -111,19 +118,17 @@ def delete(exp_id):
             conn.close()
     flash('记录已删除','success')
     return redirect(url_for('experiments.index'))
-"""
-RESTful路由设计
-参数化查询防止SQL注入
-完整的事务处理
-详细的日志记录
-错误处理机制
-代码结构清晰
-"""
 
 @experiments_bp.route('/edit/<int:exp_id>', methods=['GET', 'POST'])
 #编辑路由
 def edit(exp_id):
-    """编辑试验记录"""
+    """
+    编辑试验记录
+    GET: 根据ID查询现有数据并填充表单
+    POST: 更新数据库
+    :param exp_id:
+    :return:
+    """
     conn = get_db_connection()
     if not conn:
         logger.error(f"编辑实验 ID={exp_id} 时数据库连接失败")
@@ -169,17 +174,16 @@ def edit(exp_id):
             return "记录不存在", 404
         logger.debug(f"加载编辑表单 ID={exp_id}")
         return render_template('edit.html', exp=exp)
-"""
-查看：首页列表
-添加：新增记录
-编辑：修改现有记录
-删除：移除记录
-"""
 
 @experiments_bp.route('/detail/<int:exp_id>')
 #详情页路由
 def detail(exp_id):
-    """显示单条试验记录的详细信息"""
+    """
+    显示单条试验记录的详细信息
+    包括所有字段，实验报告呢欧容使用Markdown渲染
+    :param exp_id:
+    :return:
+    """
     conn = get_db_connection()
     if not conn:
         return "数据库连接失败"
@@ -190,15 +194,16 @@ def detail(exp_id):
     if not exp:
         return "记录不存在", 404
     return render_template('detail.html', exp=exp)
-"""
-查看单条试验记录的完整信息
-GET请求，通过ID查询单挑记录
-简洁的只读展示页面
-"""
 
 @experiments_bp.route('/search')
 #搜寻路由
 def search():
+    """
+    搜索试验记录（模糊匹配）
+    支持在实验名称、备注、报告内容中查找关键词
+    搜索结果干日期倒叙排序。
+    :return:
+    """
     q = request.args.get('q','').strip()
     if not q:
         return redirect(url_for('experiments.index'))
@@ -226,8 +231,3 @@ def search():
         finally:
             conn.close()
     return render_template('index.html', experiments=experiments, search_query=q)
-"""
-全文搜索，支持多个字段模糊匹配
-GET请求，LIKE模糊查询
-多字段搜索，结果按日期排序
-"""

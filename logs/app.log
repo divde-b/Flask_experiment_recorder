@@ -1185,3 +1185,61 @@ pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; chec
 2026-03-21 16:08:29,002 - routes.experiments - INFO - 访问首页
 2026-03-21 16:08:29,005 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:08:29] "GET / HTTP/1.1" 200 -
 2026-03-21 16:08:29,013 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:08:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:16:56,161 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-21 21:16:56,162 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-21 21:16:56,162 - werkzeug - INFO -  * Restarting with stat
+2026-03-21 21:16:56,399 - werkzeug - WARNING -  * Debugger is active!
+2026-03-21 21:16:56,404 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-21 21:16:57,586 - routes.experiments - INFO - 访问首页
+2026-03-21 21:16:57,594 - database - ERROR - 数据库连接失败： (1049, "Unknown database 'expriment_db'")
+2026-03-21 21:16:57,595 - routes.experiments - ERROR - 数据库连接失败
+2026-03-21 21:16:57,595 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:16:57] "GET / HTTP/1.1" 200 -
+2026-03-21 21:19:29,657 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-21 21:19:29,657 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-21 21:19:29,658 - werkzeug - INFO -  * Restarting with stat
+2026-03-21 21:19:29,906 - werkzeug - WARNING -  * Debugger is active!
+2026-03-21 21:19:29,911 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-21 21:19:31,054 - routes.experiments - INFO - 访问首页
+2026-03-21 21:19:31,087 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:31] "GET / HTTP/1.1" 200 -
+2026-03-21 21:19:31,152 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:31] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-21 21:19:37,428 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:37] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-21 21:19:37,437 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:19:38,349 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:38] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-21 21:19:38,349 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:38] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 21:19:38,350 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:38] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 21:19:55,155 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:55] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-21 21:19:55,163 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:19:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:20:08,541 - routes.experiments - INFO - 搜索关键词 'ARP',找到1条记录
+2026-03-21 21:20:08,541 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:20:08] "GET /search?q=ARP HTTP/1.1" 200 -
+2026-03-21 21:20:08,548 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:20:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:20:16,370 - routes.experiments - INFO - 搜索关键词 '的',找到1条记录
+2026-03-21 21:20:16,371 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:20:16] "GET /search?q=的 HTTP/1.1" 200 -
+2026-03-21 21:20:16,378 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:20:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:20:19,764 - routes.experiments - INFO - 访问首页
+2026-03-21 21:20:19,767 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:20:19] "GET / HTTP/1.1" 200 -
+2026-03-21 21:20:19,775 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:20:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:20:20,822 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:20:20] "GET /add HTTP/1.1" 200 -
+2026-03-21 21:20:20,829 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:20:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:20:58,529 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-21 21:20:58,530 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-21 21:20:58,530 - werkzeug - INFO -  * Restarting with stat
+2026-03-21 21:20:58,755 - werkzeug - WARNING -  * Debugger is active!
+2026-03-21 21:20:58,760 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-21 21:21:00,041 - routes.experiments - INFO - 访问首页
+2026-03-21 21:21:00,056 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:00] "GET / HTTP/1.1" 200 -
+2026-03-21 21:21:00,145 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:21:02,940 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:21:02,956 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 21:21:11,913 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:11] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-21 21:21:11,927 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:21:11,939 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 21:21:13,507 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:13] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 21:21:13,507 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:13] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-21 21:21:13,508 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:13] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 21:21:24,754 - routes.experiments - INFO - 访问首页
+2026-03-21 21:21:24,758 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:24] "GET / HTTP/1.1" 200 -
+2026-03-21 21:21:24,773 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 21:21:24,787 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 21:21:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -

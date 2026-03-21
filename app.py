@@ -1,7 +1,7 @@
 """
-主文件，日志格式，操作系统文件，
+Flask应用主入口
+负责创建应用实例、配置、注册蓝图、配置日志。
 """
-
 from flask import Flask
 from routes.experiments import experiments_bp
 import logging
@@ -9,6 +9,7 @@ import os
 from logging.handlers import RotatingFileHandler
 from config import Config
 
+#-----------日志配置----------
 #确保日志目录存在
 log_dir = 'logs'
 if not os.path.exists(log_dir):
@@ -25,12 +26,12 @@ file_handler = RotatingFileHandler(
     encoding='utf-8'
 )
 file_handler.setFormatter(log_formatter)
-file_handler.setLevel(logging.INFO) #文件记录INFO及以上级别
+file_handler.setLevel(logging.INFO)  #文件记录 INFO 及以上级别
 
 #控制台处理器
 console_handler = logging.StreamHandler()
 console_handler.setFormatter(log_formatter)
-console_handler.setLevel(logging.DEBUG)
+console_handler.setLevel(logging.DEBUG)  #控制台输出 DEBUG 及以上级别
 
 #配置根日志记录器
 logging.basicConfig(
@@ -41,13 +42,17 @@ logging.basicConfig(
 #获取当前模块的logger
 logger = logging.getLogger(__name__)
 
+#----------FLask应用---------
+
 #创建Flask应用实例
 app = Flask(__name__)
-app.config.from_object(Config)
+app.config.from_object(Config)  #从config.py加载配置（包含SECRET_KEY、ADMIN_PASSWORD 等）
 
 #注册蓝图
 app.register_blueprint(experiments_bp)
 
-
+#----------启动----------
 if __name__ == '__main__':
-    app.run(debug=True) #启用调试模式
+    #开发模式，启用调试
+    #生产环境使用 gunicorn 等服务器，并关闭debug
+    app.run(debug=True)
