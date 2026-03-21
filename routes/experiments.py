@@ -1,6 +1,7 @@
 """
 路由文件，蓝图
 """
+
 from flask import Blueprint, render_template, request, redirect, url_for, current_app, flash
 from pymysql import Error
 from database import get_db_connection
@@ -10,6 +11,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 experiments_bp = Blueprint('experiments', __name__, url_prefix='')
+
 
 @experiments_bp.route('/')
 #首页路由
@@ -29,7 +31,6 @@ def index():
             return "查询失败"
     conn.close()
     return render_template('index.html', experiments=experiments)
-
 """
 记录访问日志
 连接数据库
@@ -72,7 +73,6 @@ def add():
             conn.close()
             return redirect(url_for('experiments.index'))
     return render_template('add.html')
-
 """
 POST 请求处理（提交表单）
 从表单获取数据
@@ -111,7 +111,6 @@ def delete(exp_id):
             conn.close()
     flash('记录已删除','success')
     return redirect(url_for('experiments.index'))
-
 """
 RESTful路由设计
 参数化查询防止SQL注入
@@ -170,7 +169,6 @@ def edit(exp_id):
             return "记录不存在", 404
         logger.debug(f"加载编辑表单 ID={exp_id}")
         return render_template('edit.html', exp=exp)
-
 """
 查看：首页列表
 添加：新增记录
@@ -192,7 +190,6 @@ def detail(exp_id):
     if not exp:
         return "记录不存在", 404
     return render_template('detail.html', exp=exp)
-
 """
 查看单条试验记录的完整信息
 GET请求，通过ID查询单挑记录
@@ -229,7 +226,6 @@ def search():
         finally:
             conn.close()
     return render_template('index.html', experiments=experiments, search_query=q)
-
 """
 全文搜索，支持多个字段模糊匹配
 GET请求，LIKE模糊查询

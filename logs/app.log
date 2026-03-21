@@ -1123,3 +1123,65 @@ pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; chec
 2026-03-19 15:53:52,460 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 15:53:52] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
 2026-03-19 15:54:12,261 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 15:54:12] "GET /edit/1 HTTP/1.1" 200 -
 2026-03-19 15:54:12,278 - werkzeug - INFO - 127.0.0.1 - - [19/Mar/2026 15:54:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 15:59:59,442 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-21 15:59:59,442 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-21 15:59:59,443 - werkzeug - INFO -  * Restarting with stat
+2026-03-21 15:59:59,669 - werkzeug - WARNING -  * Debugger is active!
+2026-03-21 15:59:59,674 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-21 16:00:01,399 - routes.experiments - INFO - 访问首页
+2026-03-21 16:00:01,419 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:01] "GET / HTTP/1.1" 200 -
+2026-03-21 16:00:01,497 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:00:01,537 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 16:00:07,482 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:07] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-21 16:00:07,491 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:00:08,583 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:08] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-21 16:00:08,584 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:08] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 16:00:08,584 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:08] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 16:00:38,396 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:38] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-21 16:00:38,403 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:00:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:02:00,610 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:02:00] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-21 16:02:00,619 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:02:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:02:01,771 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:02:01] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-21 16:02:01,771 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:02:01] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 16:02:01,772 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:02:01] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 16:05:23,568 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:23] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-21 16:05:23,575 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:05:32,694 - routes.experiments - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-21 16:05:32,695 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:32] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-21 16:05:32,699 - routes.experiments - INFO - 访问首页
+2026-03-21 16:05:32,702 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:32] "GET / HTTP/1.1" 200 -
+2026-03-21 16:05:32,714 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:05:34,320 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:34] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-21 16:05:34,328 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:05:36,060 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:36] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-21 16:05:36,061 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:36] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 16:05:36,061 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:36] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 16:05:59,139 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:59] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-21 16:05:59,146 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:05:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:06:43,134 - routes.experiments - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-21 16:06:43,135 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:06:43] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-21 16:06:43,139 - routes.experiments - INFO - 访问首页
+2026-03-21 16:06:43,158 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:06:43] "GET / HTTP/1.1" 200 -
+2026-03-21 16:06:43,169 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:06:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:06:44,403 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:06:44] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-21 16:06:44,411 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:06:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:07:07,472 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:07] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-21 16:07:26,076 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:26] "GET /edit/1 HTTP/1.1" 200 -
+2026-03-21 16:07:26,083 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:07:54,120 - routes.experiments - INFO - 成功更新实验记录 ID=1，新数据：ARP双向欺骗 / 2026-02-13
+2026-03-21 16:07:54,121 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:54] "[32mPOST /edit/1 HTTP/1.1[0m" 302 -
+2026-03-21 16:07:54,125 - routes.experiments - INFO - 访问首页
+2026-03-21 16:07:54,141 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:54] "GET / HTTP/1.1" 200 -
+2026-03-21 16:07:54,154 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:07:55,342 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:55] "GET /detail/1 HTTP/1.1" 200 -
+2026-03-21 16:07:55,350 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:07:57,111 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:57] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
+2026-03-21 16:07:57,111 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:57] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 16:07:57,112 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:07:57] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-21 16:08:26,865 - routes.experiments - INFO - 搜索关键词 'ARP',找到1条记录
+2026-03-21 16:08:26,866 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:08:26] "GET /search?q=ARP HTTP/1.1" 200 -
+2026-03-21 16:08:26,873 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:08:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-21 16:08:29,002 - routes.experiments - INFO - 访问首页
+2026-03-21 16:08:29,005 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:08:29] "GET / HTTP/1.1" 200 -
+2026-03-21 16:08:29,013 - werkzeug - INFO - 127.0.0.1 - - [21/Mar/2026 16:08:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

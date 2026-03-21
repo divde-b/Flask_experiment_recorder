@@ -1,11 +1,13 @@
 """
 主文件，日志格式，操作系统文件，
 """
+
 from flask import Flask
 from routes.experiments import experiments_bp
 import logging
 import os
 from logging.handlers import RotatingFileHandler
+from config import Config
 
 #确保日志目录存在
 log_dir = 'logs'
@@ -41,12 +43,7 @@ logger = logging.getLogger(__name__)
 
 #创建Flask应用实例
 app = Flask(__name__)
-
-#flash
-app.secret_key = 'dakjgkjas4364'
-
-#管理员密码
-app.config['ADMIN_PASSWORD'] = 'Zls292524'
+app.config.from_object(Config)
 
 #注册蓝图
 app.register_blueprint(experiments_bp)
