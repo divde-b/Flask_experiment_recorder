@@ -12,7 +12,6 @@ venv/
 
 # 项目敏感信息
 knowledge_base.json
-config.py
 
 # IDE
 .vscode/
