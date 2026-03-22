@@ -1374,3 +1374,82 @@ pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; chec
 2026-03-22 13:07:58,042 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 13:07:58] "[36mGET /static/images/ARP实验拓扑.png HTTP/1.1[0m" 304 -
 2026-03-22 13:07:58,042 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 13:07:58] "[36mGET /static/images/攻击前靶机ARP表.png HTTP/1.1[0m" 304 -
 2026-03-22 13:07:58,042 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 13:07:58] "[36mGET /static/images/攻击后ARP表.png HTTP/1.1[0m" 304 -
+2026-03-22 14:05:30,301 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-22 14:05:30,301 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-22 14:05:30,302 - werkzeug - INFO -  * Restarting with stat
+2026-03-22 14:05:30,598 - werkzeug - WARNING -  * Debugger is active!
+2026-03-22 14:05:30,605 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-22 14:05:55,566 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:05:55] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:05:55,572 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:05:55] "GET /auth/login HTTP/1.1" 200 -
+2026-03-22 14:05:55,575 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:05:55] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:05:55,577 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:05:55] "GET /auth/login HTTP/1.1" 200 -
+2026-03-22 14:05:55,580 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:05:55] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:08:15,670 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:08:15] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:08:15,674 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:08:15] "GET /auth/login HTTP/1.1" 200 -
+2026-03-22 14:08:15,676 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:08:15] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:08:15,678 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:08:15] "GET /auth/login HTTP/1.1" 200 -
+2026-03-22 14:08:15,680 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:08:15] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:08:15,882 - werkzeug - INFO -  * Detected change in 'D:\\OneDrive\\Desktop\\flask_mysql_demo\\test\\test_site.py', reloading
+2026-03-22 14:08:15,925 - werkzeug - INFO -  * Restarting with stat
+2026-03-22 14:08:16,184 - werkzeug - WARNING -  * Debugger is active!
+2026-03-22 14:08:16,189 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-22 14:09:22,991 - routes.experiments - INFO - 访问首页
+2026-03-22 14:09:23,018 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:09:23] "GET / HTTP/1.1" 200 -
+2026-03-22 14:09:23,124 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:09:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-22 14:09:57,654 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:09:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-22 14:09:57,670 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:09:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 14:10:43,972 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:10:43] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:10:43,976 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:10:43] "GET /auth/login HTTP/1.1" 200 -
+2026-03-22 14:10:43,978 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:10:43] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:10:43,980 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:10:43] "GET /auth/login HTTP/1.1" 200 -
+2026-03-22 14:10:43,982 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:10:43] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:13:27,316 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-22 14:13:27,316 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-22 14:13:27,317 - werkzeug - INFO -  * Restarting with stat
+2026-03-22 14:13:27,565 - werkzeug - WARNING -  * Debugger is active!
+2026-03-22 14:13:27,571 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-22 14:13:28,874 - routes.experiments - INFO - 访问首页
+2026-03-22 14:13:28,889 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:13:28] "GET / HTTP/1.1" 200 -
+2026-03-22 14:13:28,990 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:13:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-22 14:16:09,492 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-22 14:16:09,493 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-22 14:16:09,494 - werkzeug - INFO -  * Restarting with stat
+2026-03-22 14:16:09,759 - werkzeug - WARNING -  * Debugger is active!
+2026-03-22 14:16:09,765 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-22 14:16:10,948 - routes.experiments - INFO - 访问首页
+2026-03-22 14:16:10,961 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:16:10] "GET / HTTP/1.1" 200 -
+2026-03-22 14:16:11,059 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:16:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-22 14:17:24,348 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-22 14:17:24,349 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-22 14:17:24,350 - werkzeug - INFO -  * Restarting with stat
+2026-03-22 14:17:24,606 - werkzeug - WARNING -  * Debugger is active!
+2026-03-22 14:17:24,612 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-22 14:17:25,772 - routes.experiments - INFO - 访问首页
+2026-03-22 14:17:25,798 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:17:25] "GET / HTTP/1.1" 200 -
+2026-03-22 14:17:25,872 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:17:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-22 14:34:35,004 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-22 14:34:35,004 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-22 14:34:35,005 - werkzeug - INFO -  * Restarting with stat
+2026-03-22 14:34:35,246 - werkzeug - WARNING -  * Debugger is active!
+2026-03-22 14:34:35,253 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-22 14:34:36,276 - routes.experiments - INFO - 访问首页
+2026-03-22 14:34:36,290 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:34:36] "GET / HTTP/1.1" 200 -
+2026-03-22 14:34:36,310 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:34:36] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2026-03-22 14:36:07,973 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-22 14:36:07,974 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-22 14:36:07,975 - werkzeug - INFO -  * Restarting with stat
+2026-03-22 14:36:08,228 - werkzeug - WARNING -  * Debugger is active!
+2026-03-22 14:36:08,234 - werkzeug - INFO -  * Debugger PIN: 339-249-301
+2026-03-22 14:36:09,332 - routes.experiments - INFO - 访问首页
+2026-03-22 14:36:09,343 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:36:09] "GET / HTTP/1.1" 200 -
+2026-03-22 14:36:09,438 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:36:09] "GET /static/CSS/style.css HTTP/1.1" 200 -
+2026-03-22 14:36:18,309 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:36:18] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2026-03-22 14:36:18,315 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:36:18] "[32mGET / HTTP/1.1[0m" 302 -
+2026-03-22 14:36:18,323 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:36:18] "GET /auth/login HTTP/1.1" 200 -
+2026-03-22 14:36:18,331 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2026 14:36:18] "[36mGET /static/CSS/style.css HTTP/1.1[0m" 304 -

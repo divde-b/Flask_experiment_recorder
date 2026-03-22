@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>实验记录系统</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
 {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
@@ -15,7 +15,7 @@
   {% endif %}
 {% endwith %}
 <body>
-    <h1>网络试验记录</h1>
+    <h1>我的技术文档</h1>
     <div style="display: flex; justify-content: space-between; align-items: center;">
     <h1>📋 我的网络实验记录</h1>
     <div>

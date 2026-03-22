@@ -23,3 +23,9 @@ logs/
 
 #项目文件
 Photo/
+
+#测试文件
+test/
+
+#配置文件
+config.py

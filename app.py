@@ -53,6 +53,13 @@ app.config.from_object(Config)  #从config.py加载配置（包含SECRET_KEY、A
 app.register_blueprint(experiments_bp)
 app.register_blueprint(auth_bp)
 
+#提升安全性
+app.config.update(
+    SESSION_COOKIE_SECURE=True,  #仅通过 HTTPS 传输cookie
+    SESSION_COOKIE_HTTPONLY=True,  #默认开启，确保为True
+    SESSION_COOKIE_SAMESITEASK='Lax',  #防止 CSRF 攻击
+)
+
 #----------启动----------
 if __name__ == '__main__':
     #开发模式，启用调试
