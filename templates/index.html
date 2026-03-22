@@ -16,6 +16,18 @@
 {% endwith %}
 <body>
     <h1>网络试验记录</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h1>📋 我的网络实验记录</h1>
+    <div>
+        {% if session.username %}
+            <span>欢迎，{{ session.username }}！</span>
+            <a href="{{ url_for('auth.logout') }}" style="margin-left: 20px;">退出登录</a>
+        {% else %}
+            <a href="{{ url_for('auth.login') }}">登录</a>
+            <a href="{{ url_for('auth.register') }}" style="margin-left: 10px;">注册</a>
+        {% endif %}
+    </div>
+</div>
     <a class="btn-add" href="{{ url_for('experiments.add') }}">添加新实验</a>
 
     <!--搜索框区域-->

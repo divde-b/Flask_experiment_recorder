@@ -4,10 +4,11 @@
 所有路由都挂载在 / 路径下（无前缀）。
 """
 
-from flask import Blueprint, render_template, request, redirect, url_for, current_app, flash
+from flask import Blueprint, render_template, request, redirect, url_for, current_app, flash, session
 from pymysql import Error
 from database import get_db_connection
 import logging
+from functools import wraps
 
 
 logger = logging.getLogger(__name__)
@@ -15,15 +16,26 @@ logger = logging.getLogger(__name__)
 #创建蓝图实例，url_pre==erfix=''表示无前缀，即路由直接挂载在根路径
 experiments_bp = Blueprint('experiments', __name__, url_prefix='')
 
+#登录验证装饰器
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'user_id' not in session:
+            flash('请先登录','warning')
+            return redirect(url_for('auth.login'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 @experiments_bp.route('/')
-#首页路由
+@login_required
 def index():
     """
     显示所有试验记录，按日期倒序排序。
     如果数据库连接失败，返回错误提示信息
     :return:
     """
+    user_id = session.get('user_id')
+    connection = get_db_connection()
     logger.info("访问首页")
     conn = get_db_connection()
     if not conn:
@@ -41,7 +53,7 @@ def index():
     return render_template('index.html', experiments=experiments)
 
 @experiments_bp.route('/add', methods=['GET', 'POST'])
-#实验记录路由
+@login_required
 def add():
     """
     添加新实验记录
@@ -60,14 +72,16 @@ def add():
         notes = request.form['notes']
         report = request.form['report']  #实验报告（Markdown）
 
+        user_id = session['user_id']
+
         conn = get_db_connection()
         if not conn:
             return "数据库连接失败"
         with conn.cursor() as cursor:
             sql = """
                 INSERT INTO experiments 
-                (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report, user_id)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
                   """
             report = request.form.get('report')
             values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report)
@@ -85,7 +99,7 @@ def add():
     return render_template('add.html')
 
 @experiments_bp.route('/delete/<int:exp_id>', methods=['POST'])
-#删除路由
+@login_required
 def delete(exp_id):
     """
     删除试验记录（需要提供管理员密码）
@@ -93,6 +107,7 @@ def delete(exp_id):
     :param exp_id:
     :return:
     """
+    user_id = session['user_id']
     #获取前端传来的密码
     password = request.form.get('password','')
     if password != current_app.config['ADMIN_PASSWORD']:
@@ -107,7 +122,7 @@ def delete(exp_id):
         return "数据库连接失败"
     with conn.cursor() as cursor:
         try:
-            cursor.execute("DELETE FROM experiments WHERE id = %s", (exp_id,))
+            cursor.execute("DELETE FROM experiments WHERE id = %s AND user_id = %s", (exp_id,user_id))
             conn.commit()
             logger.info(f"成功删除实验记录 ID={exp_id}")
         except Error as e:
@@ -120,7 +135,7 @@ def delete(exp_id):
     return redirect(url_for('experiments.index'))
 
 @experiments_bp.route('/edit/<int:exp_id>', methods=['GET', 'POST'])
-#编辑路由
+@login_required
 def edit(exp_id):
     """
     编辑试验记录
@@ -129,6 +144,7 @@ def edit(exp_id):
     :param exp_id:
     :return:
     """
+    user_id = session['user_id']
     conn = get_db_connection()
     if not conn:
         logger.error(f"编辑实验 ID={exp_id} 时数据库连接失败")
@@ -149,9 +165,9 @@ def edit(exp_id):
             sql = """
                 UPDATE experiments
                 SET exp_name = %s, exp_date = %s, attacker_ip = %s, target_ip = %s, gateway_ip = %s, success = %s, notes = %s, report = %s
-                WHERE id=%s
+                WHERE id= % s AND user_id = %s
             """
-            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report, exp_id)
+            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report, exp_id, user_id)
             try:
                 cursor.execute(sql, values)
                 conn.commit()
@@ -164,9 +180,9 @@ def edit(exp_id):
                 conn.close()
         return redirect(url_for('experiments.index'))
 
-    else:
+    else:  #GET请求
         with conn.cursor() as cursor:
-            cursor.execute("SELECT * FROM experiments WHERE id = %s", (exp_id,))
+            cursor.execute("SELECT * FROM experiments WHERE id = %s AND user_id = %s", (exp_id,))
             exp = cursor.fetchone()
         conn.close()
         if not exp:
@@ -176,7 +192,7 @@ def edit(exp_id):
         return render_template('edit.html', exp=exp)
 
 @experiments_bp.route('/detail/<int:exp_id>')
-#详情页路由
+@login_required
 def detail(exp_id):
     """
     显示单条试验记录的详细信息
@@ -184,6 +200,7 @@ def detail(exp_id):
     :param exp_id:
     :return:
     """
+    user_id = session['user_id']
     conn = get_db_connection()
     if not conn:
         return "数据库连接失败"
@@ -196,7 +213,7 @@ def detail(exp_id):
     return render_template('detail.html', exp=exp)
 
 @experiments_bp.route('/search')
-#搜寻路由
+@login_required
 def search():
     """
     搜索试验记录（模糊匹配）
@@ -204,6 +221,7 @@ def search():
     搜索结果干日期倒叙排序。
     :return:
     """
+    user_id = session['user_id']
     q = request.args.get('q','').strip()
     if not q:
         return redirect(url_for('experiments.index'))
@@ -217,12 +235,12 @@ def search():
         #使用LIKE模糊匹配多个字段
         sql = """
             SELECT * FROM experiments
-            WHERE exp_name LIKE %s OR notes LIKE %s OR report LIKE %s
-            ORDER BY exp_date DESC  
+            WHERE (exp_name LIKE %s OR notes LIKE %s OR report LIKE %s)
+            ORDER BY exp_date DESC
         """
         like_term = f"%{q}%"
         try:
-            cursor.execute(sql, (like_term, like_term, like_term))
+            cursor.execute(sql, (like_term, like_term, like_term, user_id))
             experiments = cursor.fetchall()
             logger.info(f"搜索关键词 '{q}',找到{len(experiments)}条记录")
         except Error as e:
