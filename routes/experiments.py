@@ -43,7 +43,7 @@ def index():
         return "数据库连接失败，请检查配置。"
     with conn.cursor() as cursor:
         try:
-            cursor.execute("SELECT * FROM experiments ORDER BY exp_date DESC")
+            cursor.execute("SELECT * FROM experiments WHERE user_id = %s ORDER BY exp_date DESC", (user_id,))
             experiments = cursor.fetchall()
             logger.debug(f"查询到 {len(experiments)} 条记录")
         except Error as e:
@@ -70,7 +70,7 @@ def add():
         gateway_ip = request.form['gateway_ip']
         success = True if request.form.get('success') else False
         notes = request.form['notes']
-        report = request.form['report']  #实验报告（Markdown）
+        report = request.form.get('report','')  #实验报告（Markdown）
 
         user_id = session['user_id']
 
@@ -84,7 +84,7 @@ def add():
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
                   """
             report = request.form.get('report')
-            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report)
+            values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report, user_id)
             try:
                 cursor.execute(sql, values)
                 conn.commit()
@@ -109,13 +109,14 @@ def delete(exp_id):
     """
     user_id = session['user_id']
     #获取前端传来的密码
+    """
     password = request.form.get('password','')
     if password != current_app.config['ADMIN_PASSWORD']:
         logger.warning(f"尝试删除记录 ID={exp_id} 但密码错误")
         flash('密码错误删除失败','danger')
         #返回错误页面
         return redirect(url_for('experiments.index'))
-
+    """
     conn = get_db_connection()
     if not conn:
         logger.error(f"删除实验 ID={exp_id} 时数据库连接失败")
@@ -165,7 +166,7 @@ def edit(exp_id):
             sql = """
                 UPDATE experiments
                 SET exp_name = %s, exp_date = %s, attacker_ip = %s, target_ip = %s, gateway_ip = %s, success = %s, notes = %s, report = %s
-                WHERE id= % s AND user_id = %s
+                WHERE id= %s AND user_id = %s
             """
             values = (exp_name, exp_date, attacker_ip, target_ip, gateway_ip, success, notes, report, exp_id, user_id)
             try:
@@ -182,7 +183,7 @@ def edit(exp_id):
 
     else:  #GET请求
         with conn.cursor() as cursor:
-            cursor.execute("SELECT * FROM experiments WHERE id = %s AND user_id = %s", (exp_id,))
+            cursor.execute("SELECT * FROM experiments WHERE id = %s AND user_id = %s", (exp_id,user_id))
             exp = cursor.fetchone()
         conn.close()
         if not exp:

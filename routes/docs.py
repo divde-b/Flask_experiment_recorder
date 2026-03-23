@@ -47,9 +47,76 @@ def index():
     conn.close()
     return render_template("docs/index.html", docs=docs)
 
+@docs_bp.route('/add', methods=['GET','POST'])
+@login_required
+def add():
+    """添加新文档"""
+    if request.method == "POST":
+        title = request.form['title'].strip()
+        content = request.form['content'].strip()
+        if not title:
+            flash('标题不能为空','danger')
+            return redirect(url_for('docs.add'))
 
+        user_id = session['user_id']
+        conn = get_db_connection()
+        if not conn:
+            return "数据库连接失败"
+        with conn.cursor() as cursor:
+            sql = "INSERT INFO docs (title, content, user_id) VALUES (%s, %s, %s)"
+            try:
+                cursor.execute(sql, (title, content, user_id))
+                conn.commit()
+                logger.info(f"新增文档：{title}")
+                flash('文档添加成功','success')
+                return redirect(url_for('docs.index'))
+            except Error as e:
+                conn.rollback()
+                logger.exception("插入文档失败")
+                flash('文档添加失败','danger')
+            finally:
+                conn.close()
+    return render_template("docs/add.html")
 
+@docs_bp.route('/edit/<int:doc_id>', methods=['GET', 'POST'])
+@login_required
+def edit(doc_id):
+    """编辑文档"""
+    user_id = session['user_id']
+    conn = get_db_connection()
+    if not conn:
+        return "数据库连接失败"
 
+    if request.method == "POST":
+        title = request.form['title'].strip()
+        content = request.form['content'].strip()
+        if not title:
+            flash('标题不能为空','danger')
+            return redirect(url_for('docs.edit',doc_id=doc_id))
+
+        with conn.cursor() as cursor:
+            sql = "UPDATE docs SET title = %s, content = %s, user_id = %s WHERE id = %s"
+            try:
+                cursor.execute(sql, (title, content, doc_id, user_id))
+
+                conn.commit()
+                if cursor.rowcount == 0:
+                    flash('文档不存在或无权限编辑','danger')
+                else:
+                    logger.info(f"更新文档 ID={doc_id}")
+                    flash(f"文档更新成功","success")
+                return redirect(url_for('docs.index'))
+            except Error as e:
+                conn.rollback()
+                logger.exception(f"更新文档ID={doc_id}失败")
+                flash("文档更新失败","danger")
+            finally:
+                conn.close()
+    else:
+        #GET请求。加载文档内容
+        with conn.cursor() as cursor:
+            cursor.execute("SELECT id, title, content FROM docs WHERE user_id = %s ORDER BY created_at DESC", (doc_id,user_id))
+            doc = cursor.fetchone()
 
 
 

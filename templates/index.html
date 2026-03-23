@@ -66,7 +66,9 @@
                 <td>
                     <a href="{{ url_for('experiments.detail', exp_id=exp.id) }}">查看</a>
                     <a href="{{ url_for('experiments.edit', exp_id=exp.id) }}" style="margin-right:10px;">编辑</a>
-                    <button onclick="deleteWithPassword({{ exp.id }})" style="background:none; border:none; color:#dc3545; cursor:pointer; text-decoration:underline;">删除</button>
+                    <form action="{{ url_for('experiments.delete', exp_id=exp.id) }}" method="post" style="display:inline;">
+                        <button type="submit" onclick="return confirm('确定删除该记录吗？');" style="background:none; border:none; color:#dc3545; cursor:pointer; text-decoration:underline;">删除</button>
+                    </form>
                 </td>
             </tr>
             {% else %}

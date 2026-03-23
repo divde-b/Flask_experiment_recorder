@@ -306,3 +306,27 @@ td:last-child button {
         margin-right: 12px;
     }
 }
+
+/* 重置操作列中的表单样式，避免全局样式干扰 */
+td:last-child form {
+    display: inline-block;      /* 改为 inline-block 确保不换行 */
+    background: none;           /* 清除背景 */
+    padding: 0;                 /* 清除内边距 */
+    margin: 0;                  /* 清除外边距 */
+    box-shadow: none;           /* 清除阴影 */
+    max-width: none;            /* 清除最大宽度限制 */
+    width: auto;                /* 宽度自适应 */
+}
+
+td:last-child button {
+    /* 确保按钮样式不被全局 form button 影响 */
+    background: none;
+    border: none;
+    color: #dc3545;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    vertical-align: middle;
+}
