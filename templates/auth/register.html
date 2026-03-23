@@ -2,23 +2,53 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>注册</title>
+    <title>NetLab笔记 - 注册</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
 <body>
-    <h1>用户注册</h1>
+    <!-- 网站头部 -->
+    <div class="site-header">
+        <div class="site-title">
+            <h1>NetLab 笔记</h1>
+            <p class="site-slogan">记录网络实验，沉淀技术文档</p>
+        </div>
+        <div class="user-info">
+            <a href="{{ url_for('auth.login') }}">登录</a>
+        </div>
+    </div>
+
+    <!-- Flash 消息 -->
     {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
         {% for category, message in messages %}
-            <div class="flashes {{ category }}">{{ message }}</div>
+          <li class="{{ category }}">{{ message }}</li>
         {% endfor %}
+        </ul>
+      {% endif %}
     {% endwith %}
-    <form method="post">
-        <label>用户名：</label><input type="text" name="username" required><br><br>
-        <label>密码：</label><input type="password" name="password" required><br><br>
-        <label>确认密码：</label><input type="password" name="confirm" required><br><br>
-        <button type="submit">注册</button>
-    </form>
-    <p>已有账号？<a href="{{ url_for('auth.login') }}">去登录</a></p>
-    <a href="{{ url_for('experiments.index') }}">返回首页</a>
+
+    <!-- 注册表单 -->
+    <div class="form-container">
+        <div class="form-card">
+            <h2>注册</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label>用户名：</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label>密码：</label>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label>确认密码：</label>
+                    <input type="password" name="confirm" required>
+                </div>
+                <button type="submit" class="btn-submit">注册</button>
+            </form>
+            <p class="form-footer">已有账号？<a href="{{ url_for('auth.login') }}">去登录</a></p>
+        </div>
+    </div>
 </body>
 </html>

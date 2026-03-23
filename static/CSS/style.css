@@ -1,4 +1,7 @@
 /* ==================== 基础样式 ==================== */
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 30px auto;
@@ -329,4 +332,253 @@ td:last-child button {
     cursor: pointer;
     text-decoration: underline;
     vertical-align: middle;
+}
+
+/* 网站头部 */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 20px;
+}
+
+.site-title h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.site-slogan {
+    margin: 5px 0 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.user-info {
+    font-size: 16px;
+}
+
+.user-info a {
+    margin-left: 15px;
+}
+
+/* 操作栏 */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-form input {
+    width: 250px;
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 6px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+}
+
+/* 表格操作列按钮样式 */
+.actions {
+    white-space: nowrap;
+}
+.actions a, .actions form {
+    display: inline-block;
+    margin-right: 8px;
+}
+.actions button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    font: inherit;
+}
+
+/* 表单容器和卡片样式 */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin-top: 30px;
+}
+
+.form-card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin: 0;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.form-footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* 适配小屏幕 */
+@media (max-width: 480px) {
+    .form-card {
+        padding: 20px;
+        margin: 0 15px;
+    }
+}
+
+/* 覆盖 form button 中不适用于 .btn-submit 的样式 */
+.form-card .btn-submit {
+    width: 100%;
+    margin-left: 0;          /* 清除 margin-left: 120px 的影响 */
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* 确保输入框容器正确 */
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* 卡片容器明确限制宽度 */
+.form-card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* 外层容器居中 */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin-top: 30px;
 }

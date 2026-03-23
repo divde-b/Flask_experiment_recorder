@@ -1,106 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>实验记录系统</title>
+    <title>NetLab笔记 - 网络实验记录</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
-{% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    <ul class="flashes">
-    {% for category, message in messages %}
-      <li class="{{ category }}">{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
 <body>
-    <h1>我的技术文档</h1>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-    <h1>📋 我的网络实验记录</h1>
-    <div>
-        {% if session.username %}
-            <span>欢迎，{{ session.username }}！</span>
-            <a href="{{ url_for('auth.logout') }}" style="margin-left: 20px;">退出登录</a>
+    <!-- 网站头部 -->
+    <div class="site-header">
+        <div class="site-title">
+            <h1>NetLab 笔记</h1>
+            <p class="site-slogan">记录网络实验，沉淀技术文档</p>
+        </div>
+        <div class="user-info">
+            {% if session.username %}
+                <span>欢迎，{{ session.username }}！</span>
+                <a href="{{ url_for('auth.logout') }}">退出登录</a>
+            {% else %}
+                <a href="{{ url_for('auth.login') }}">登录</a>
+                <a href="{{ url_for('auth.register') }}">注册</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Flash 消息 -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <!-- 主要内容区 -->
+    <div class="main-content">
+        <div class="action-bar">
+            <a class="btn-add" href="{{ url_for('experiments.add') }}">➕ 添加新实验</a>
+            <form action="{{ url_for('experiments.search') }}" method="get" class="search-form">
+                <input type="text" name="q" placeholder="搜索实验名称、备注或报告..." value="{{ request.args.get('q', '') }}">
+                <button type="submit">🔍 搜索</button>
+            </form>
+        </div>
+
+        {% if experiments %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>实验名称</th>
+                    <th>日期</th>
+                    <th>攻击机IP</th>
+                    <th>靶机IP</th>
+                    <th>网关IP</th>
+                    <th>成功</th>
+                    <th>备注</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for exp in experiments %}
+                <tr>
+                    <td>{{ exp.id }}</td>
+                    <td>{{ exp.exp_name }}</td>
+                    <td>{{ exp.exp_date }}</td>
+                    <td>{{ exp.attacker_ip or '' }}</td>
+                    <td>{{ exp.target_ip or '' }}</td>
+                    <td>{{ exp.gateway_ip or '' }}</td>
+                    <td>{{ '✅' if exp.success else '❌' }}</td>
+                    <td>{{ exp.notes or '' }}</td>
+                    <td>{{ exp.created_at }}</td>
+                    <td class="actions">
+                        <a href="{{ url_for('experiments.detail', exp_id=exp.id) }}">查看</a>
+                        <a href="{{ url_for('experiments.edit', exp_id=exp.id) }}">编辑</a>
+                        <form action="{{ url_for('experiments.delete', exp_id=exp.id) }}" method="post" style="display:inline;">
+                            <button type="submit" onclick="return confirm('确定删除该记录吗？');">删除</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
         {% else %}
-            <a href="{{ url_for('auth.login') }}">登录</a>
-            <a href="{{ url_for('auth.register') }}" style="margin-left: 10px;">注册</a>
+        <p class="empty-message">暂无实验记录，点击上方按钮添加。</p>
+        {% endif %}
+
+        {% if request.args.get('q') %}
+        <p><a href="{{ url_for('experiments.index') }}">返回全部记录</a></p>
         {% endif %}
     </div>
-</div>
-    <a class="btn-add" href="{{ url_for('experiments.add') }}">添加新实验</a>
-
-    <!--搜索框区域-->
-    <form action="{{ url_for('experiments.search') }}" method="get" style="margin: 20px 0;">
-        <input type="text" name="q" placeholder="搜索实验名称、备注或报告..." value="{{ request.args.get('q', '') }}" style="padding: 6px; width: 300px;">
-        <button type="submit" style="padding: 6px 12px;">搜索</button>
-    </form>
-
-    <table>
-        <thead>
-        <tr>
-                <th>ID</th>
-                <th>实验名称</th>
-                <th>日期</th>
-                <th>攻击机IP</th>
-                <th>靶机IP</th>
-                <th>网关IP</th>
-                <th>成功</th>
-                <th>备注</th>
-                <th>创建时间</th>
-                <th>操作</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for exp in experiments %}
-            <tr>
-                <td>{{ exp.id }}</td>
-                <td>{{ exp.exp_name }}</td>
-                <td>{{ exp.exp_date }}</td>
-                <td>{{ exp.attacker_ip or '' }}</td>
-                <td>{{ exp.target_ip or '' }}</td>
-                <td>{{ exp.gateway_ip or '' }}</td>
-                <td>{{ '✅' if exp.success else '❌' }}</td>
-                <td>{{ exp.notes or '' }}</td>
-                <td>{{ exp.created_at }}</td>
-                <td>
-                    <a href="{{ url_for('experiments.detail', exp_id=exp.id) }}">查看</a>
-                    <a href="{{ url_for('experiments.edit', exp_id=exp.id) }}" style="margin-right:10px;">编辑</a>
-                    <form action="{{ url_for('experiments.delete', exp_id=exp.id) }}" method="post" style="display:inline;">
-                        <button type="submit" onclick="return confirm('确定删除该记录吗？');" style="background:none; border:none; color:#dc3545; cursor:pointer; text-decoration:underline;">删除</button>
-                    </form>
-                </td>
-            </tr>
-            {% else %}
-            <tr>
-                <td colspan="10" style="text-align:center;">暂无实验记录</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <!--如果是从搜返回的，可以加一个返回首页的链接-->
-    {% if request.args.get('q') %}
-    <p><a href="{{ url_for('experiments.index') }}">返回全部记录</a></p>
-    {% endif %}
-    <script>
-        function deleteWithPassword(exp_id) {
-            const password = prompt('请输入管理员密码: ');
-            if (password === null) {
-                return; //用户点击了取消
-            }
-            //创建一个隐藏表单，动态提交
-            const from = document.createElement('form');
-            from.method = 'POST';
-            form.action = '/delete/${exp_id}';
-            //添加密码字段
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = 'password';
-            input.value = password;
-            form.appendChild(input);
-            document.body.appendChild(form);
-            form.submit();
-        }
-    </script>
 </body>
 </html>

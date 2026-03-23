@@ -1,24 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>登录</title>
+    <title>NetLab笔记 - 登录</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
 <body>
-    <h1>用户登录</h1>
+    <!-- 网站头部（与主页一致，但右侧不显示用户信息） -->
+    <div class="site-header">
+        <div class="site-title">
+            <h1>NetLab 笔记</h1>
+            <p class="site-slogan">记录网络实验，沉淀技术文档</p>
+        </div>
+        <div class="user-info">
+            <a href="{{ url_for('auth.register') }}">注册</a>
+        </div>
+    </div>
+
+    <!-- Flash 消息 -->
     {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
         {% for category, message in messages %}
-            <div class="flashes {{ category }}">{{ message }}</div>
+          <li class="{{ category }}">{{ message }}</li>
         {% endfor %}
+        </ul>
+      {% endif %}
     {% endwith %}
-    <form method="POST">
-        <label>用户名：</label><input type="text" name="username" required><br><br>
-        <label>密码：</label><input type="password" name="password" required><br><br>
-        <label><input type="checkbox" name="remember">记住我</label><br><br>
-        <button type="submit">登录</button>
-    </form>
-    <p>还没有账号？<a href="{{ url_for('auth.register') }}">立即注册</a></p>
-    <a href="{{ url_for('experiments.index') }}">返回首页</a>
+
+    <!-- 登录表单 -->
+    <div class="form-container">
+        <div class="form-card">
+            <h2>登录</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label>用户名：</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label>密码：</label>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remember"> 记住我
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit">登录</button>
+            </form>
+            <p class="form-footer">还没有账号？<a href="{{ url_for('auth.register') }}">立即注册</a></p>
+        </div>
+    </div>
 </body>
 </html>
