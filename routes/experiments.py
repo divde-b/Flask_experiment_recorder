@@ -236,7 +236,7 @@ def search():
         #使用LIKE模糊匹配多个字段
         sql = """
             SELECT * FROM experiments
-            WHERE (exp_name LIKE %s OR notes LIKE %s OR report LIKE %s)
+            WHERE (exp_name LIKE %s OR notes LIKE %s OR report LIKE %s) AND user_id = %s
             ORDER BY exp_date DESC
         """
         like_term = f"%{q}%"

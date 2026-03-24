@@ -28,3 +28,8 @@ test/
 
 #配置文件
 config.py
+
+#Node.js / TypeScript
+node_modules
+npm-debug.log
+yarn-error.log

@@ -5,6 +5,9 @@
     <title>NetLab笔记 - 网络实验记录</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
+
+<script src="{{ url_for('static', filename='js/compiled/main.js') }}"></script>
+
 <body>
     <!-- 网站头部 -->
     <div class="site-header">
@@ -76,7 +79,7 @@
                         <a href="{{ url_for('experiments.detail', exp_id=exp.id) }}">查看</a>
                         <a href="{{ url_for('experiments.edit', exp_id=exp.id) }}">编辑</a>
                         <form action="{{ url_for('experiments.delete', exp_id=exp.id) }}" method="post" style="display:inline;">
-                            <button type="submit" onclick="return confirm('确定删除该记录吗？');">删除</button>
+                            <button type="submit" class="delete-btn" onclick="return confirm('确定删除该记录吗？');">删除</button>
                         </form>
                     </td>
                 </tr>

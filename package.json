@@ -1,0 +1,27 @@
+{
+  "name": "flask_mysql_demo",
+  "version": "1.0.0",
+  "description": "基于python，flask，mysql的网络试验记录与文档管理平台。",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divde-b/Flask_experiment_recorder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/divde-b/Flask_experiment_recorder/issues"
+  },
+  "homepage": "https://github.com/divde-b/Flask_experiment_recorder#readme",
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
