@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ doc.title }} - NetLab笔记</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="site-header">
+        <div class="site-title">
+            <h1>NetLab 笔记</h1>
+            <p class="site-slogan">记录网络实验，沉淀技术文档</p>
+        </div>
+        <div class="user-info">
+            {% if session.username %}
+                <span>欢迎，{{ session.username }}！</span>
+                <a href="{{ url_for('auth.logout') }}">退出登录</a>
+            {% else %}
+                <a href="{{ url_for('auth.login') }}">登录</a>
+                <a href="{{ url_for('auth.register') }}">注册</a>
+            {% endif %}
+        </div>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <div class="main-content">
+        <h1>📄 {{ doc.title }}</h1>
+        <div class="detail-card">
+            <p><strong>创建时间：</strong> {{ doc.created_at }}</p>
+            <p><strong>更新时间：</strong> {{ doc.updated_at }}</p>
+        </div>
+        <div class="report-content" id="content"></div>
+        <script>
+            const content = {{ doc.content | tojson | safe }};
+            document.getElementById('content').innerHTML = marked.parse(content);
+        </script>
+        <br>
+        <a href="{{ url_for('docs.edit', doc_id=doc.id) }}">编辑</a>
+        <a href="{{ url_for('docs.index') }}">← 返回文档列表</a>
+    </div>
+</body>
+</html>

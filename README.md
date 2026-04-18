@@ -1,23 +1,18 @@
 # 项目名称 
 
-基于python，flask，mysql的网络试验记录与文档管理平台。
+一个基于 Flask + MySQL + TypeScript 的个人知识管理系统，支持实验记录和技术文档的 Markdown 存储与展示。
 
 ## 功能特性  
 
-- ✅ 用户注册、登录、登出（密码哈希存储）
-- ✅ 实验记录的增删改查，支持 Markdown 格式的实验报告
-- ✅ 技术文档管理（独立模块，同样支持 Markdown）
-- ✅ 搜索实验记录（模糊匹配标题、备注、报告内容）
-- ✅ 删除操作需管理员密码二次验证
-- ✅ 响应式界面，适配移动端
-- ✅ 完整的日志记录（文件轮转）
-- ✅ 基于蓝图的模块化架构
-- ⏳ 集成 AI 助手（计划中）
-- ⏳ 使用 C++ 优化核心逻辑（计划中） 
+- 用户注册/登录（密码哈希、会话管理）
+- 实验记录：增删改查、搜索、Markdown 报告、用户数据隔离
+- 技术文档：独立的文档管理模块，同样支持 Markdown 渲染
+- 现代化前端：TypeScript 实现删除确认、表单验证、Flash 消息自动消失
+- 响应式布局，适配手机和桌面
 
 ## 技术栈  
 
--后端：python + Flask  
+-后端：python + Flask  + Werlzeug
 -数据库：MySQL  
 -前端：HTML/CSS/JavaScript + Markdown 渲染（marked.js）  
 -版本控制：Git + Github
@@ -51,25 +46,46 @@
 6.访问http://127.0.0.1:5000即可使用。  
 ## 项目结构  
 flask_mysql_demo/  
-├── logs/                   # 日志文件  
-├── routes/                 # 蓝图模块  
-│   ├── auth.py             # 用户认证  
-│   ├── docs.py             # 文档管理  
-│   └── experiments.py      # 实验记录  
-├── static/                 # 静态文件  
-│   ├── images/             # 截图  
-│   └── style.css           # 样式  
-├── templates/              # HTML 模板  
-│   ├── auth/               # 登录注册页面  
-│   ├── docs/               # 文档模板  
-│   └── *.html              # 实验记录模板  
+├── logs/                          # 应用日志文件  
+├── routes/                        # Flask 蓝图模块  
+│   ├── __init__.py  
+│   ├── auth.py                    # 用户注册、登录、登出  
+│   ├── docs.py                    # 技术文档管理  
+│   └── experiments.py             # 实验记录管理  
+├── static/                        # 静态资源  
+│   ├── images/                    # 项目截图或报告中的图片  
+│   ├── css/                       # 样式文件  
+│   │   └── style.css  
+│   ├── js/                        # JavaScript / TypeScript  
+│   │   ├── ts/                    # TypeScript 源码  
+│   │   │   └── main.ts  
+│   │   └── compiled/              # 编译后的 JS  
+│   │       └── main.js  
+│   └── style.css                  # 主样式  
+├── templates/                     # Jinja2 模板  
+│   ├── auth/                      # 认证相关页面  
+│   │   ├── login.html  
+│   │   └── register.html  
+│   ├── docs/                      # 文档模块模板  
+│   │   ├── index.html  
+│   │   ├── add.html  
+│   │   ├── edit.html  
+│   │   └── detail.html  
+│   ├── add.html                   # 添加实验记录  
+│   ├── edit.html                  # 编辑实验记录  
+│   ├── detail.html                # 实验记录详情  
+│   └── index.html                 # 实验记录列表  
 ├── .gitignore  
-├── app.py                  # 应用入口  
-├── config.py               # 配置文件（需自行创建，参考 config.example.py）  
-├── database.py             # 数据库连接  
-├── requirements.txt        # 依赖列表  
-├── README.md  
-└── TODO.md  
+├── app.py                         # Flask 应用入口  
+├── config.py                      # 配置文件  
+├── config.example.py              # 配置示例  
+├── database.py                    # 数据库连接工具  
+├── requirements.txt               # Python 依赖  
+├── package.json                   # Node.js 依赖  
+├── package-lock.json              # 依赖锁文件  
+├── tsconfig.json                  # TypeScript 编译配置  
+├── README.md                      # 项目说明  
+└── TODO.md                        # 开发待办  
 ## 作者  
 - Github：divde-b  
 ## 许可证  

@@ -117,10 +117,54 @@ def edit(doc_id):
         with conn.cursor() as cursor:
             cursor.execute("SELECT id, title, content FROM docs WHERE user_id = %s ORDER BY created_at DESC", (doc_id,user_id))
             doc = cursor.fetchone()
+            conn.close()
+            if not doc:
+                flash('文档不存在','danger')
+                return redirect(url_for('docs.index'))
+            return render_template("docs/edit.html", doc=doc)
 
+@docs_bp.route('/delete/<int:doc_id>', methods=['GET', 'POST'])
+@login_required
+def delete(doc_id):
+    """删除文档"""
+    user_id = session['user_id']
+    conn = get_db_connection()
+    if not conn:
+        return "数据库连接失败"
+    with conn.cursor() as cursor:
+        try:
+            cursor.execute(
+                "DELETE FROM docs WHERE user_id = %s AND id = %s", (doc_id, user_id))
+            conn.commit()
+            if cursor.rowcount == 0:
+                flash('文档不存在或无权删除','danger')
+            else:
+                logger.info(f"删除文档 ID={doc_id}")
+                flash("文档已删除","success")
+        except Error as e:
+            conn.rollback()
+            logger.exception(f"删除文档 ID={doc_id} 失败")
+            flash('删除失败','danger')
+        finally:
+            conn.close()
+    return redirect(url_for('docs.index'))
 
-
-
+@docs_bp.route('/detail/<int:doc_id>')
+@login_required
+def detail(doc_id):
+    """文档管理详情页，使用 MarkDown 渲染内容"""
+    user_id = session['user_id']
+    conn = get_db_connection()
+    if not conn:
+        return "数据库连接失败"
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT id, title, content, created_at, updated_at FROM docs WHERE user_id = %s AND id = %s", (doc_id, user_id))
+        doc = cursor.fetchone()
+    conn.close()
+    if not doc:
+        flash('文档不存在','danger')
+        return redirect(url_for('docs.index'))
+    return render_template("docs/detail.html", doc=doc)
 
 
 

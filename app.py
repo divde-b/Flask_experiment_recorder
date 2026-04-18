@@ -9,6 +9,7 @@ import os
 from logging.handlers import RotatingFileHandler
 from config import Config
 from routes.auth import auth_bp
+from routes.docs import docs_bp
 
 #-----------日志配置----------
 #确保日志目录存在
@@ -52,6 +53,7 @@ app.config.from_object(Config)  #从config.py加载配置（包含SECRET_KEY、A
 #注册蓝图
 app.register_blueprint(experiments_bp)
 app.register_blueprint(auth_bp)
+app.register_blueprint(docs_bp)
 
 #提升安全性
 app.config.update(
