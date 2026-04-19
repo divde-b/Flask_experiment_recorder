@@ -152,35 +152,6 @@ form button:active {
     margin-top: 20px;
 }
 
-/* ==================== 操作列（表格内按钮） ==================== */
-td:last-child {
-    white-space: nowrap;
-    line-height: 1.5;
-    padding: 8px 4px;
-}
-
-td:last-child a,
-td:last-child form {
-    display: inline;
-    background: none;
-    padding: 0;
-    margin-right: 8px;
-    border: none;
-    line-height: inherit;
-    vertical-align: middle;
-}
-
-td:last-child button {
-    background: none;
-    border: none;
-    color: #dc3545;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    text-decoration: underline;
-    vertical-align: middle;
-}
-
 /* ==================== 详情页卡片 ==================== */
 .detail-card {
     background: white;
@@ -302,36 +273,6 @@ td:last-child button {
     .detail-card {
         max-width: 100%;
     }
-
-    /* 操作列按钮间距稍大 */
-    td:last-child a,
-    td:last-child form {
-        margin-right: 12px;
-    }
-}
-
-/* 重置操作列中的表单样式，避免全局样式干扰 */
-td:last-child form {
-    display: inline-block;      /* 改为 inline-block 确保不换行 */
-    background: none;           /* 清除背景 */
-    padding: 0;                 /* 清除内边距 */
-    margin: 0;                  /* 清除外边距 */
-    box-shadow: none;           /* 清除阴影 */
-    max-width: none;            /* 清除最大宽度限制 */
-    width: auto;                /* 宽度自适应 */
-}
-
-td:last-child button {
-    /* 确保按钮样式不被全局 form button 影响 */
-    background: none;
-    border: none;
-    color: #dc3545;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    cursor: pointer;
-    text-decoration: underline;
-    vertical-align: middle;
 }
 
 /* 网站头部 */
@@ -404,24 +345,6 @@ td:last-child button {
     text-align: center;
     padding: 40px;
     color: #6c757d;
-}
-
-/* 表格操作列按钮样式 */
-.actions {
-    white-space: nowrap;
-}
-.actions a, .actions form {
-    display: inline-block;
-    margin-right: 8px;
-}
-.actions button {
-    background: none;
-    border: none;
-    color: #dc3545;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-    font: inherit;
 }
 
 /* 表单容器和卡片样式 */
@@ -581,4 +504,40 @@ td:last-child button {
     align-items: center;
     min-height: 70vh;
     margin-top: 30px;
+}
+
+
+/* ==================== 操作列（表格内按钮）统一样式 ==================== */
+.actions {
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.actions a,
+.actions form {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    vertical-align: middle;
+}
+
+/* 覆盖全局表单样式对操作列的影响 */
+.actions form {
+    background: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    width: auto;
 }
