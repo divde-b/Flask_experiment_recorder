@@ -38,7 +38,16 @@
         <div class="action-bar">
             <a class="btn-add" href="{{ url_for('docs.add') }}">➕ 添加新文档</a>
             <a href="{{ url_for('experiments.index') }}" style="margin-left: 10px;">← 返回实验记录</a>
+            <form action="{{ url_for('docs.search') }}" method="get" class="search-form">
+        <input type="text" name="q" placeholder="搜索文档标题或内容..." value="{{ request.args.get('q', '') }}">
+        <button type="submit">🔍 搜索</button>
+    </form>
         </div>
+
+        {% if search_query %}
+            <p>搜索 “{{ search_query }}” 的结果：</p>
+            <p><a href="{{ url_for('docs.index') }}">返回全部文档</a></p>
+        {% endif %}
 
         {% if docs %}
         <table>
@@ -59,6 +68,7 @@
                     <td>{{ doc.created_at }}</td>
                     <td>{{ doc.updated_at }}</td>
                     <td class="actions">
+                        <a href="{{ url_for('docs.detail', doc_id=doc.id) }}">查看</a>
                         <a href="{{ url_for('docs.edit', doc_id=doc.id) }}">编辑</a>
                         <form action="{{ url_for('docs.delete', doc_id=doc.id) }}" method="post" style="display:inline;">
                             <button type="submit" class="delete-btn" onclick="return confirm('确定删除该文档吗？');">删除</button>
