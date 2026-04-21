@@ -4,19 +4,20 @@
 
 ## 功能特性  
 
-- 用户注册/登录（密码哈希、会话管理）
+- 用户注册/登录（密码哈希、会话管理、”记住我“）
 - 实验记录：增删改查、搜索、Markdown 报告、用户数据隔离
 - 技术文档：独立的文档管理模块，同样支持 Markdown 渲染
 - 现代化前端：TypeScript 实现删除确认、表单验证、Flash 消息自动消失
 - 响应式布局，适配手机和桌面
+- 生产部署：Gunicorn + Nginx + cpolar 内网穿透
 
 ## 技术栈  
 
--后端：python + Flask  + Werlzeug
+-后端：python + Flask  + Werlzeug + Gunicorn
 -数据库：MySQL  
 -前端：HTML/CSS/JavaScript + Markdown 渲染（marked.js）  
--版本控制：Git + Github
--部署：ubuntu 虚拟机 + Nginx
+-工具：Git + npm, Vs Code, pycharm 
+-部署：ubuntu 虚拟机 + cpolar
 
 ## 安装与运行  
 1.克隆仓库：  
